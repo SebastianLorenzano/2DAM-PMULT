@@ -15,10 +15,14 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
 
-        transform.Translate(x * xSpeed * Time.deltaTime, y * ySpeed * Time.deltaTime, 0);
-        if ()
+
+        transform.Translate(xSpeed * Time.deltaTime,ySpeed * Time.deltaTime, 0);
+        if ((transform.position.x < -4) || (transform.position.x > 4))
+            xSpeed = -xSpeed;
+        else if ((transform.position.y < -2.5) || (transform.position.y > 2.5))
+            ySpeed = -ySpeed;
+
+
     }
 }
