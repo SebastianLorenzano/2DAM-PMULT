@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    [SerializeField] private int bulletSpeed = 2;
+    [SerializeField] private float bulletSpeed = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -13,9 +13,4 @@ public class bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (transform.position.y > 3.50)
-            Destroy(gameObject);
-    }
 }

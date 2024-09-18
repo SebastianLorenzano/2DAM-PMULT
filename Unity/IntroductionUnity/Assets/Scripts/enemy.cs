@@ -6,13 +6,15 @@ public class enemy : MonoBehaviour
 {
     [SerializeField] private float xSpeed = 2;
     [SerializeField] private float ySpeed = -1.0f;
-    // Start is called before the first frame update
+    [SerializeField] Transform prefabEnemyBullet;
+
+
     void Start()
     {
-        
+        StartCoroutine(Disparar());
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         transform.Translate(xSpeed * Time.deltaTime,ySpeed * Time.deltaTime, 0);
@@ -22,8 +24,21 @@ public class enemy : MonoBehaviour
             ySpeed = -ySpeed;
     }
 
+    IEnumerator Disparar()
+    {
+        float pause = Random.Range(3.0f, 8.0f);
+        yield return new WaitForSeconds(pause);
+        Transform disparo = Instantiate(prefabEnemyBullet, transform.position, Quaternion.identity);
+        StartCoroutine(Disparar());
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-            
+        if (collision != null)
+        {
+            if (collision.tag == "Player" || collision.tag == "AllyBullet")
+                Destroy(gameObject);
+        }
     }
 }

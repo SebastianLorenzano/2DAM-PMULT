@@ -8,9 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4052379522055689773, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4559118003976642245, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
       propertyPath: m_Name
       value: DisparoEnemigo Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559118003976642245, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_TagString
+      value: EnemyBullet
       objectReference: {fileID: 0}
     - target: {fileID: 5003932545726010353, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -60,8 +68,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4052379522055689773, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4559118003976642245, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3856518943956968425}
   m_SourcePrefab: {fileID: 100100000, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+--- !u!1 &8637441485959581455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4559118003976642245, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+  m_PrefabInstance: {fileID: 5231888572810416586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3856518943956968425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637441485959581455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7add483e404321443bb3478e0990f60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: -3
