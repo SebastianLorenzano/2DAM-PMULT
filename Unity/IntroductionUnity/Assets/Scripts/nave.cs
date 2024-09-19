@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 
@@ -22,18 +23,24 @@ public class Nave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-
         txtStats.text = "Health = " + health;
 
-        transform.Translate(x * xSpeed * Time.deltaTime, y * ySpeed * Time.deltaTime, 0);
+        float x1 = Input.GetAxis("Horizontal");
+        float y1 = Input.GetAxis("Vertical");
+
+        float x2 = x1 * xSpeed * Time.deltaTime;
+        float y2 = y1 * ySpeed * Time.deltaTime;
+
+        if 
+        transform.Translate(, , 0);
 
         if (Input.GetButtonDown("Fire1"))
         {
             var disparo = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
         }
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

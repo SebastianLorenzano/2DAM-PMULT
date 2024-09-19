@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4052379522055689773, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4559118003976642245, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
       propertyPath: m_Name
       value: DisparoNave Variant
