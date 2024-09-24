@@ -3,15 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class collisions : MonoBehaviour
+
+public enum Direction
+{
+    TOP = 1,
+    RIGHT = 2,
+    BOTTOM = 3,
+    LEFT = 4
+}
+
+public class CollisionWrapper
+{
+    public bool CollidingWithWest { get; set; } = false;
+    public bool CollidingWithEast { get; set; } = false;
+    public bool CollidingWithNorth { get; set; } = false;
+    public bool CollidingWithSouth { get; set; } = false;
+
+}
+
+    public class collisions : MonoBehaviour
 {
 
-    public static bool IsOutOfBounds(GameObject element)
+    public static CollisionWrapper IsOutOfBounds(GameObject element)
     {
+        CollisionWrapper result = new();
+        if (element == null)
+            return result;
         var x = element.transform.position.x;
         var y = element.transform.position.y;
-        var width = element.GetComponent<SpriteRenderer>().bounds.size.x;
-        var height = element.GetComponent<SpriteRenderer>().bounds.size.y;
+        var map = GameObject.Find("Main Camera").GetComponent<mainCameraScript>();
+        var width = element.
+        var height = Screen.height;
+        Debug.Log(width);
+        Debug.Log(height);
 
         var map = GameObject.Find("Main Camera").GetComponent<mainCameraScript>();
         var mapX = map.X;
@@ -19,14 +43,15 @@ public class collisions : MonoBehaviour
         var mapWidth = map.Width;
         var mapHeight = map.Height;
         if (x < mapX + width / 2)               // Leaves from the west side
-            return true;
+            result.CollidingWithWest = true;
         if (y < mapY + height / 2)              // Leaves from the south side
-            return true;
+            result.CollidingWithSouth = true;
         if (x + width / 2 > mapX + mapWidth)    // Leaves from the East side
-            return true;
+            result.CollidingWithEast = true;
         if (y + width / 2 > mapY + mapHeight)   // Leaves from the North side
-            return true;
-        return false;
+            result.CollidingWithNorth = true;
+        return result;
     }
 
 }
+
