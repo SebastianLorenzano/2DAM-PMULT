@@ -15,6 +15,9 @@ public class bulletAlly : bullet
     {
         if (collision.tag == "Enemy")
         {
+            Transform explosion = Instantiate(prefabExplotion,
+            collision.transform.position, Quaternion.identity);
+            Destroy(explosion.gameObject, 1f);
             Destroy(gameObject);
 
         }
