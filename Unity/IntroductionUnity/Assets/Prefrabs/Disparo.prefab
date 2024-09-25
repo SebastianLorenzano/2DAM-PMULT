@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8808218158514459019}
   - component: {fileID: 220652701202066877}
   - component: {fileID: 7157179497324840765}
-  - component: {fileID: -4052379522055689773}
+  - component: {fileID: 5216324336859559010}
   m_Layer: 0
   m_Name: Disparo
   m_TagString: Untagged
@@ -159,15 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4052379522055689773
+--- !u!114 &5216324336859559010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4559118003976642245}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47102fe304aef3943a951f1af802e7bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5a08c9c22fd244a86078e1d7d389f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletSpeed: 3
+  prefabExplotion: {fileID: 9120999571209266398, guid: 52b7bc4a37318b74289e7d556e98dfa3, type: 3}

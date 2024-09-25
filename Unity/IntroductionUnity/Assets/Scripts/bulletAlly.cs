@@ -16,6 +16,7 @@ public class bulletAlly : bullet
         if (collision.tag == "Enemy")
         {
             Destroy(gameObject);
+
         }
     }
 }

@@ -11,8 +11,11 @@ public class Nave : MonoBehaviour
     [SerializeField] private float xSpeed = 2.0f;
     [SerializeField] private float ySpeed = 3.0f;
     [SerializeField] private int health = 2;
+    [SerializeField] private GameObject background;
     private Camera cam;
     private Renderer shipRenderer;
+    public float Width { get; private set; }
+    public float Height { get; private set; }
 
 
     public UnityEngine.UI.Text txtStats;
@@ -36,7 +39,7 @@ public class Nave : MonoBehaviour
         float x2 = x1 * xSpeed * Time.deltaTime;
         float y2 = y1 * ySpeed * Time.deltaTime;
 
-        CollisionWrapper collision = collisions.IsOutOfBounds(gameObject);
+        CollisionWrapper collision = Collisions.IsOutOfBounds(gameObject);
         if (x1 > 0 && !collision.CollidingWithEast || x1 < 0 && !collision.CollidingWithWest)
             transform.Translate(x2, 0, 0);
         if (y1 > 0 && !collision.CollidingWithNorth || y1 < 0 && !collision.CollidingWithSouth)

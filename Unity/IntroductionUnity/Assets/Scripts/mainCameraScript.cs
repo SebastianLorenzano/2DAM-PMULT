@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class mainCameraScript : MonoBehaviour
 {
-    public float Width => Screen.width;
-    public float Height => Screen.height;
-    public float X => Camera.main.transform.position.x;
-    public float Y => Camera.main.transform.position.y;
+    public float Width => Height * Camera.main.aspect;
+    public float Height => 2 * Camera.main.orthographicSize;
+    public float X => Camera.main.transform.position.x - Width / 2;
+    public float Y => Camera.main.transform.position.y - Height / 2;
 
     // Start is called before the first frame update
     void Start()

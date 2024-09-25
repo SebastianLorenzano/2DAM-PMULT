@@ -17,10 +17,16 @@ public class enemy : MonoBehaviour
 
     void Update()
     {
+
         transform.Translate(xSpeed * Time.deltaTime,ySpeed * Time.deltaTime, 0);
-        if ((transform.position.x < -6.60) || (transform.position.x > 6.60))
+
+        var x = transform.position.x;
+        var y = transform.position.y;
+        transform.Translate(xSpeed * Time.deltaTime, ySpeed * Time.deltaTime, 0);
+        CollisionWrapper collision = Collisions.IsOutOfBounds(gameObject);
+        if (x > 0 && collision.CollidingWithEast || x < 0 && collision.CollidingWithWest)
             xSpeed = -xSpeed;
-        else if ((transform.position.y < -2.80) || (transform.position.y > 2.80))
+        if (y > 0 && collision.CollidingWithNorth || y < 0 && collision.CollidingWithSouth)
             ySpeed = -ySpeed;
     }
 

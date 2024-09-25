@@ -21,8 +21,8 @@ public class CollisionWrapper
 
 }
 
-    public class collisions : MonoBehaviour
-{
+    public class Collisions : MonoBehaviour
+    {
 
     public static CollisionWrapper IsOutOfBounds(GameObject element)
     {
@@ -32,18 +32,20 @@ public class CollisionWrapper
         var x = element.transform.position.x;
         var y = element.transform.position.y;
         var map = GameObject.Find("Main Camera").GetComponent<mainCameraScript>();
-        var width = element.
-        var height = Screen.height;
-        Debug.Log(width);
-        Debug.Log(height);
+        var width = element.GetComponent<SpriteRenderer>().bounds.size.x;
+        var height = element.GetComponent<SpriteRenderer>().bounds.size.y;
 
-        var map = GameObject.Find("Main Camera").GetComponent<mainCameraScript>();
         var mapX = map.X;
         var mapY = map.Y;
         var mapWidth = map.Width;
         var mapHeight = map.Height;
+
         if (x < mapX + width / 2)               // Leaves from the west side
+        {
+            Debug.Log("Hitting West wall || " + map.X);
             result.CollidingWithWest = true;
+        }
+            
         if (y < mapY + height / 2)              // Leaves from the south side
             result.CollidingWithSouth = true;
         if (x + width / 2 > mapX + mapWidth)    // Leaves from the East side
