@@ -17,9 +17,6 @@ public class enemy : MonoBehaviour
 
     void Update()
     {
-
-        transform.Translate(xSpeed * Time.deltaTime,ySpeed * Time.deltaTime, 0);
-
         var x = transform.position.x;
         var y = transform.position.y;
         transform.Translate(xSpeed * Time.deltaTime, ySpeed * Time.deltaTime, 0);
@@ -32,7 +29,7 @@ public class enemy : MonoBehaviour
 
     IEnumerator Disparar()
     {
-        float pause = Random.Range(3.0f, 8.0f);
+        float pause = Random.Range(2.0f, 5.0f);
         yield return new WaitForSeconds(pause);
         Transform disparo = Instantiate(prefabEnemyBullet, transform.position, Quaternion.identity);
         StartCoroutine(Disparar());
@@ -44,7 +41,11 @@ public class enemy : MonoBehaviour
         if (collision != null)
         {
             if (collision.tag == "Player" || collision.tag == "AllyBullet")
+            {
+                Nave.Points += 10;
                 Destroy(gameObject);
+            }
+                
         }
     }
 }

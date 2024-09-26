@@ -13,5 +13,4 @@ public class bullet : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, bulletSpeed, 0);
     }
 
-    // Update is called once per frame
 }

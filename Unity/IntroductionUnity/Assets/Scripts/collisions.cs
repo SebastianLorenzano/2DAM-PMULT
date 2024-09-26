@@ -21,39 +21,46 @@ public class CollisionWrapper
 
 }
 
-    public class Collisions : MonoBehaviour
-    {
+public class Collisions : MonoBehaviour
+{
 
     public static CollisionWrapper IsOutOfBounds(GameObject element)
     {
         CollisionWrapper result = new();
         if (element == null)
             return result;
-        var x = element.transform.position.x;
-        var y = element.transform.position.y;
-        var map = GameObject.Find("Main Camera").GetComponent<mainCameraScript>();
-        var width = element.GetComponent<SpriteRenderer>().bounds.size.x;
-        var height = element.GetComponent<SpriteRenderer>().bounds.size.y;
-
-        var mapX = map.X;
-        var mapY = map.Y;
-        var mapWidth = map.Width;
-        var mapHeight = map.Height;
-
-        if (x < mapX + width / 2)               // Leaves from the west side
-        {
-            Debug.Log("Hitting West wall || " + map.X);
+        if (IsOutOfBoundsWest(element))     // Leaves from the West side
             result.CollidingWithWest = true;
-        }
-            
-        if (y < mapY + height / 2)              // Leaves from the south side
+        if (IsOutOfBoundsSouth(element))    // Leaves from the south side
             result.CollidingWithSouth = true;
-        if (x + width / 2 > mapX + mapWidth)    // Leaves from the East side
+        if (IsOutOfBoundsEast(element))    // Leaves from the East side
             result.CollidingWithEast = true;
-        if (y + width / 2 > mapY + mapHeight)   // Leaves from the North side
+        if (IsOutOfBoundsNorth(element))   // Leaves from the North side
             result.CollidingWithNorth = true;
         return result;
     }
+
+    public static bool IsOutOfBoundsWest(GameObject e)
+    {
+        return e.transform.position.x < mainCameraScript.X + e.GetComponent<SpriteRenderer>().bounds.size.x / 2;
+    }
+
+    public static bool IsOutOfBoundsSouth(GameObject e)
+    {
+        return e.transform.position.y < mainCameraScript.Y + e.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+    }
+
+    public static bool IsOutOfBoundsEast(GameObject e)
+    {
+        return e.transform.position.x + e.GetComponent<SpriteRenderer>().bounds.size.x / 2 > mainCameraScript.X + mainCameraScript.Width;
+    }
+
+    public static bool IsOutOfBoundsNorth(GameObject e)
+    {
+        return e.transform.position.y + e.GetComponent<SpriteRenderer>().bounds.size.y / 2 > mainCameraScript.Y + mainCameraScript.Height;
+    }
+
+
 
 }
 

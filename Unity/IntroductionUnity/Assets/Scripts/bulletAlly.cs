@@ -6,20 +6,19 @@ public class bulletAlly : bullet
 {
     void Update()
     {
-
-        if (transform.position.y > 3.50)
-            Destroy(gameObject);
+        if (Collisions.IsOutOfBoundsNorth(gameObject))
+            Destroy(gameObject, 1f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.tag == "Enemy")
         {
             Transform explosion = Instantiate(prefabExplotion,
             collision.transform.position, Quaternion.identity);
             Destroy(explosion.gameObject, 1f);
             Destroy(gameObject);
-
         }
     }
 }

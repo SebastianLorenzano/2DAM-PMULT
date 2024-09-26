@@ -12,6 +12,7 @@ public class Nave : MonoBehaviour
     [SerializeField] private float ySpeed = 3.0f;
     [SerializeField] private int health = 2;
     [SerializeField] private GameObject background;
+    public static int Points = 0;
     private Camera cam;
     private Renderer shipRenderer;
     public float Width { get; private set; }
@@ -31,7 +32,7 @@ public class Nave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        txtStats.text = "Health = " + health;
+        txtStats.text = "Health = " + health + "\nPoints: " + Points;
 
         float x1 = Input.GetAxis("Horizontal");
         float y1 = Input.GetAxis("Vertical");
