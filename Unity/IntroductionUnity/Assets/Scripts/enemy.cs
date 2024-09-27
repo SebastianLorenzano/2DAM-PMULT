@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-    [SerializeField] private float xSpeed = 2;
+    [SerializeField] private float xSpeed = 2f;
     [SerializeField] private float ySpeed = -1.0f;
     [SerializeField] Transform prefabEnemyBullet;
 
 
     void Start()
     {
+        int r;
         StartCoroutine(Disparar());
+        if (Random.Range(-1, 1) > 0)
+            r = 1;
+        else
+            r = -1;
+        xSpeed *= r;
     }
 
 
