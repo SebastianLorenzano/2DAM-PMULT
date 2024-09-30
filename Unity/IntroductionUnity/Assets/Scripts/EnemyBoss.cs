@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class EnemyBoss : MonoBehaviour
 {
     [SerializeField] private float xSpeed = 2f;
     [SerializeField] private float ySpeed = -1.0f;
@@ -11,13 +11,9 @@ public class enemy : MonoBehaviour
 
     void Start()
     {
-        int random;
+        
         StartCoroutine(Disparar());
-        if (Random.Range(-1, 1) > 0)
-            random = 1;
-        else
-            random = -1;
-        xSpeed *= random;
+        StartCoroutine(Move());
     }
 
 
@@ -25,13 +21,35 @@ public class enemy : MonoBehaviour
     {
         var x = transform.position.x;
         var y = transform.position.y;
-        transform.Translate(xSpeed * Time.deltaTime, ySpeed * Time.deltaTime, 0);
         CollisionWrapper collision = Collisions.IsOutOfBounds(gameObject);
-        if (x > 0 && collision.CollidingWithEast || x < 0 && collision.CollidingWithWest)
+        if (x > 0 && collision.CollidingWithEast || x < 0 && collision.CollidingWithWest)   //copy from main character
             xSpeed = -xSpeed;
         if (y > 0 && collision.CollidingWithNorth || y < 0 && collision.CollidingWithSouth)
             ySpeed = -ySpeed;
     }
+
+    float GetRandomSpeed()
+    {
+        int random;
+        if (Random.Range(-1, 1) > 0)
+            random = 1;
+        else
+            random = -1;
+
+        return Random.Range(2, 5) * random;
+        
+    }
+
+    IEnumerator Move()
+    {
+        
+        float pause = Random.Range(3.0f, 5.0f);
+        yield return new WaitForSeconds(pause);
+        xSpeed = GetRandomSpeed();
+        ySpeed = GetRandomSpeed();
+        StartCoroutine(Move());
+    }
+
 
     IEnumerator Disparar()
     {
@@ -51,7 +69,7 @@ public class enemy : MonoBehaviour
                 Nave.Points += 10;
                 Destroy(gameObject);
             }
-                
+
         }
     }
 }
