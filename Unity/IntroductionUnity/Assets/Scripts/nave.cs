@@ -10,29 +10,27 @@ public class Nave : MonoBehaviour
     [SerializeField] Transform prefabDisparo;
     [SerializeField] private float xSpeed = 2.0f;
     [SerializeField] private float ySpeed = 3.0f;
-    [SerializeField] private int health = 2;
-    [SerializeField] private GameObject background;
+    [SerializeField] private int health = 3;
     public static int Points = 0;
-    private Camera cam;
-    private Renderer shipRenderer;
     public float Width { get; private set; }
     public float Height { get; private set; }
 
 
     public UnityEngine.UI.Text txtStats;
+    public UnityEngine.UI.Text txtEnd;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        cam = Camera.main;
-        shipRenderer = GetComponent<Renderer>();
+        txtEnd.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         txtStats.text = "Health = " + health + "\nPoints: " + Points;
+
 
         float x1 = Input.GetAxis("Horizontal");
         float y1 = Input.GetAxis("Vertical");
@@ -61,7 +59,12 @@ public class Nave : MonoBehaviour
             if (collision.tag == "Enemy" || collision.tag == "EnemyBullet")
                 health--;
             if (health < 0)
+            {
+                txtEnd.enabled = true;
+                txtEnd.text = "Game Over";
                 Destroy(gameObject);
+            }
+                
         }
     }
 }
