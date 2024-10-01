@@ -1,0 +1,2485 @@
+fileFormatVersion: 2
+guid: ebf297fbbd1020445a72bb59cb597774
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: tatermand@gmail.com
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1399
+      y: 1869
+      width: 781
+      height: 81
+    spriteID: 2e02f79cd3f1c754e81f450b4fe93995
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1399, y: 1869}
+    spritePosition: {x: 2663, y: 36}
+  - name: opengameart.org/users/tatermand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1762
+      width: 1303
+      height: 99
+    spriteID: 47d56d2e55cd0164ba90d21719628a7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1762}
+    spritePosition: {x: 2130, y: 182}
+  - name: Rectangle 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4056
+      y: 902
+      width: 0
+      height: 0
+    spriteID: 065b0c665405aca45af6c323ad4becf4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 556, y: 599}
+    spritePosition: {x: 3500, y: 303}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2702
+      y: 1869
+      width: 172
+      height: 183
+    spriteID: 8b5b01a6a2216874787f984c2cefbf1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2702, y: 1869}
+    spritePosition: {x: 3138, y: 653}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2206
+      width: 221
+      height: 384
+    spriteID: 8767aaa9d7f98c345b8c8caa143f8617
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2206}
+    spritePosition: {x: 3136, y: 264}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2882
+      y: 1869
+      width: 172
+      height: 183
+    spriteID: a46d081e442b24a4db65bdff2e4da829
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2882, y: 1869}
+    spritePosition: {x: 2917, y: 653}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 233
+      y: 2206
+      width: 221
+      height: 384
+    spriteID: e4703345a2a82e24da633ac83dfa35e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 233, y: 2206}
+    spritePosition: {x: 2915, y: 264}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2376
+      y: 2046
+      width: 162
+      height: 119
+    spriteID: 266a23daa1aecc14db34a48e7283efad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2376, y: 2046}
+    spritePosition: {x: 1520, y: 684}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 346
+      y: 2598
+      width: 112
+      height: 408
+    spriteID: b01fc1ba62816384fbfbb7a2dcc0660d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 346, y: 2598}
+    spritePosition: {x: 1545, y: 240}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2882
+      y: 2060
+      width: 164
+      height: 118
+    spriteID: 63c490b2d3f708143ae3597e366fb0ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2882, y: 2060}
+    spritePosition: {x: 1937, y: 685}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 466
+      y: 2598
+      width: 112
+      height: 408
+    spriteID: 2b011878687002a4f87aba2eb11d3090
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 466, y: 2598}
+    spritePosition: {x: 1963, y: 240}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2702
+      y: 2060
+      width: 163
+      height: 119
+    spriteID: d46084c6d50944145a8e838f1bfc756a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2702, y: 2060}
+    spritePosition: {x: 1727, y: 685}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 586
+      y: 2598
+      width: 112
+      height: 408
+    spriteID: e9c65ec4d8b7b1845bdbd119e28ca816
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 586, y: 2598}
+    spritePosition: {x: 1747, y: 240}
+  - name: Green Fragments
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2598
+      width: 106
+      height: 571
+    spriteID: 8513fb1548bb91043afb59a4d4d96e60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2598}
+    spritePosition: {x: 1113, y: 259}
+  - name: Violent Fragments
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 2598
+      width: 106
+      height: 571
+    spriteID: 2c1745d97e914d247a127a008afb11e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 2598}
+    spritePosition: {x: 954, y: 259}
+  - name: Blue Fragments
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 232
+      y: 2598
+      width: 106
+      height: 571
+    spriteID: 7e2fba92b4c54954c8be0877c2387b55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 232, y: 2598}
+    spritePosition: {x: 789, y: 259}
+  - name: Blue Swirl
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1106
+      y: 1869
+      width: 285
+      height: 280
+    spriteID: 0fb8b2538e64a9f489bcf060c4a66827
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1106, y: 1869}
+    spritePosition: {x: 1232, y: 559}
+  - name: Layer 14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 805
+      y: 1869
+      width: 293
+      height: 273
+    spriteID: d495148eb08d29c4fa06bef001a1f1cb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 805, y: 1869}
+    spritePosition: {x: 2622, y: 699}
+  - name: Layer 13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 462
+      y: 2206
+      width: 227
+      height: 360
+    spriteID: 2dddf22692ae03a42a4e40a573e2e176
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 462, y: 2206}
+    spritePosition: {x: 2659, y: 927}
+  - name: Layer 9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2050
+      y: 1958
+      width: 86
+      height: 226
+    spriteID: acf5bdc21cbfa524f9780fa174b5823a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2050, y: 1958}
+    spritePosition: {x: 3252, y: 1217}
+  - name: Layer 12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2188
+      y: 1869
+      width: 180
+      height: 326
+    spriteID: 3c18c0ab2410af941b998f24927731b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2188, y: 1869}
+    spritePosition: {x: 3207, y: 862}
+  - name: Rounded Rectangle 1 copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 1154
+      width: 14
+      height: 65
+    spriteID: e1450e318a949af4bb44dd3a0c220dad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 1154}
+    spritePosition: {x: 3146, y: 1373}
+  - name: Rounded Rectangle 1 copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4044
+      y: 1154
+      width: 14
+      height: 65
+    spriteID: e48921f04503cde4990efe3cbfb5516b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4044, y: 1154}
+    spritePosition: {x: 3146, y: 1457}
+  - name: Rounded Rectangle 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4066
+      y: 1154
+      width: 14
+      height: 65
+    spriteID: 4013efcbb71687b41be9774097fe6c13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4066, y: 1154}
+    spritePosition: {x: 3146, y: 1546}
+  - name: Layer 8 copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3062
+      y: 1869
+      width: 109
+      height: 248
+    spriteID: 9331510941b6dcb4199f7c21d04e92a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3062, y: 1869}
+    spritePosition: {x: 3098, y: 1175}
+  - name: Layer 7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 877
+      y: 2206
+      width: 86
+      height: 371
+    spriteID: dac6ef76d9a976b499fcf5257c3782e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 877, y: 2206}
+    spritePosition: {x: 2884, y: 1277}
+  - name: Layer 2 copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 697
+      y: 2206
+      width: 172
+      height: 376
+    spriteID: 89fff8d695d69104b97d7fee3f7b6597
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 697, y: 2206}
+    spritePosition: {x: 2845, y: 942}
+  - name: Particles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4066
+      y: 1227
+      width: 16
+      height: 34
+    spriteID: b8434bebeab5c9e46822c07bd3224af1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4066, y: 1227}
+    spritePosition: {x: 2286, y: 1227}
+  - name: Particles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 794
+      width: 26
+      height: 58
+    spriteID: b9523654fd5990b4f89a72b7b1dcff14
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 794}
+    spritePosition: {x: 2294, y: 1261}
+  - name: Hard Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3768
+      y: 562
+      width: 246
+      height: 360
+    spriteID: b86533ec3ce6bc744b1bf1c9974f14d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3768, y: 562}
+    spritePosition: {x: 2218, y: 1203}
+  - name: Sof Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1869
+      width: 259
+      height: 329
+    spriteID: c0220815f5afab64b973d70976d6e2ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1869}
+    spritePosition: {x: 2418, y: 1175}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3512
+      y: 4
+      width: 502
+      height: 178
+    spriteID: eebf272e189c74a47adb72867e51f92d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3512, y: 4}
+    spritePosition: {x: 2091, y: 1510}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3512
+      y: 562
+      width: 248
+      height: 360
+    spriteID: a48524ce189626b4b9f30ba66bd2bcf2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3512, y: 562}
+    spritePosition: {x: 2429, y: 901}
+  - name: Particles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4056
+      y: 860
+      width: 16
+      height: 34
+    spriteID: bd035cd2fa7218049ab60c96d0d94fc5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4056, y: 860}
+    spritePosition: {x: 1784, y: 1227}
+  - name: Particles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 860
+      width: 26
+      height: 58
+    spriteID: 5a556d88bcc78614fb35363c039f6c85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 860}
+    spritePosition: {x: 1792, y: 1261}
+  - name: Hard Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3768
+      y: 930
+      width: 246
+      height: 360
+    spriteID: 8f251423b95287b4ea7c20f326e5c7ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3768, y: 930}
+    spritePosition: {x: 1716, y: 1203}
+  - name: Sof Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 271
+      y: 1869
+      width: 259
+      height: 329
+    spriteID: bc3eea8dbfacfbb4daa0664fa92125c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 271, y: 1869}
+    spritePosition: {x: 1916, y: 1175}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3512
+      y: 190
+      width: 502
+      height: 178
+    spriteID: 53ff162715edd5d438962a90b5addcc1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3512, y: 190}
+    spritePosition: {x: 1589, y: 1510}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3512
+      y: 930
+      width: 248
+      height: 360
+    spriteID: b57f88c8cbf2789448a7096924c198f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3512, y: 930}
+    spritePosition: {x: 1927, y: 901}
+  - name: Particles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3062
+      y: 2125
+      width: 16
+      height: 34
+    spriteID: 2ed7d9d24eb19a543887ea9efbc18528
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3062, y: 2125}
+    spritePosition: {x: 1322, y: 1227}
+  - name: Particles
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4056
+      y: 794
+      width: 26
+      height: 58
+    spriteID: 683dd2c507afab241abcf18aec13e0e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4056, y: 794}
+    spritePosition: {x: 1330, y: 1261}
+  - name: Hard Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3768
+      y: 1298
+      width: 246
+      height: 360
+    spriteID: e220d80a34f8a6e4fb65921651b0d6e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3768, y: 1298}
+    spritePosition: {x: 1254, y: 1203}
+  - name: Sof Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 538
+      y: 1869
+      width: 259
+      height: 329
+    spriteID: c62d03337dd1b2d499249ca34029e86d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 538, y: 1869}
+    spritePosition: {x: 1454, y: 1175}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3512
+      y: 376
+      width: 502
+      height: 178
+    spriteID: 93cc29c557c2a5e44af22d7517202612
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3512, y: 376}
+    spritePosition: {x: 1127, y: 1510}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3512
+      y: 1298
+      width: 248
+      height: 360
+    spriteID: 5973a57408f64594eb0202d78b72bf23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3512, y: 1298}
+    spritePosition: {x: 1465, y: 901}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3995
+      y: 1869
+      width: 88
+      height: 78
+    spriteID: 469d05ff8a77d7546ac5936f8d1d0ec3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3995, y: 1869}
+    spritePosition: {x: 1115, y: 1507}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 930
+      width: 65
+      height: 216
+    spriteID: 05181cb5287ea5949b6e773062626bb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 930}
+    spritePosition: {x: 1126, y: 1225}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 190
+      width: 65
+      height: 152
+    spriteID: 8193cb09e8c34a043822315540dce2f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 190}
+    spritePosition: {x: 1127, y: 1120}
+  - name: Halo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3420
+      y: 1869
+      width: 110
+      height: 111
+    spriteID: 23b55f91892cd6145bd1749423ae8e0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3420, y: 1869}
+    spritePosition: {x: 1104, y: 1117}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3896
+      y: 1869
+      width: 91
+      height: 82
+    spriteID: bfc14ef7aaac5014e911330f0ee4e0c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3896, y: 1869}
+    spritePosition: {x: 1003, y: 1505}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 562
+      width: 69
+      height: 224
+    spriteID: 25cad8e533b74da4b89bec720d5fe6cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 562}
+    spritePosition: {x: 1014, y: 1219}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 4
+      width: 68
+      height: 158
+    spriteID: f50b25f0bf8890640a739c92c169cb5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 4}
+    spritePosition: {x: 1015, y: 1118}
+  - name: Halo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3179
+      y: 1869
+      width: 114
+      height: 115
+    spriteID: 26560d49d9de56b42907eb7e3d531a4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3179, y: 1869}
+    spritePosition: {x: 991, y: 1115}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3768
+      y: 1666
+      width: 88
+      height: 78
+    spriteID: c632a01694bb15846afabe9716b5779d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3768, y: 1666}
+    spritePosition: {x: 890, y: 1507}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 1298
+      width: 65
+      height: 216
+    spriteID: a56065806dacc2141912241e40c38e54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 1298}
+    spritePosition: {x: 903, y: 1225}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4022
+      y: 376
+      width: 65
+      height: 152
+    spriteID: 0e55df47fc3391a47b9f76c44ca66010
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4022, y: 376}
+    spritePosition: {x: 904, y: 1120}
+  - name: Halo
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3301
+      y: 1869
+      width: 111
+      height: 111
+    spriteID: 070706924d9624d4da91462947a8e039
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3301, y: 1869}
+    spritePosition: {x: 880, y: 1117}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2376
+      y: 1869
+      width: 318
+      height: 169
+    spriteID: 2300562e9806b6e4d90b747cc937da31
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2376, y: 1869}
+    spritePosition: {x: 550, y: 1373}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3538
+      y: 1869
+      width: 111
+      height: 101
+    spriteID: ad1f247bece8d394cb5a785896b52c52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3538, y: 1869}
+    spritePosition: {x: 662, y: 1263}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 346
+      y: 3014
+      width: 101
+      height: 146
+    spriteID: 8ba4d35016b0cc84d8f34213ef4e2d54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 346, y: 3014}
+    spritePosition: {x: 666, y: 1137}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1725
+      y: 1958
+      width: 317
+      height: 170
+    spriteID: 5daecd4a4bc30004d8391bb8812b65a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1725, y: 1958}
+    spritePosition: {x: 314, y: 1377}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3777
+      y: 1869
+      width: 111
+      height: 100
+    spriteID: 4b2e912053e1cd041aca9af33acc1f55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3777, y: 1869}
+    spritePosition: {x: 418, y: 1268}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 466
+      y: 3014
+      width: 101
+      height: 145
+    spriteID: 10fd1f5c8d2696f4c85011ee0414900c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 466, y: 3014}
+    spritePosition: {x: 422, y: 1142}
+  - name: Splash
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1399
+      y: 1958
+      width: 318
+      height: 170
+    spriteID: 115cc8e9966990147bdaf339c3467abe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1399, y: 1958}
+    spritePosition: {x: 71, y: 1377}
+  - name: Projectile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3657
+      y: 1869
+      width: 112
+      height: 100
+    spriteID: 07749bd4d39e20e4b8a01cbf14577d5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3657, y: 1869}
+    spritePosition: {x: 170, y: 1268}
+  - name: Fire
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2546
+      y: 2046
+      width: 101
+      height: 145
+    spriteID: 9f5b10f2742cc57479b10b7bdb8e3bf5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2546, y: 2046}
+    spritePosition: {x: 174, y: 1142}
+  - name: Color Fill 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 3500
+      height: 1750
+    spriteID: 8b6f32482e0fca542afdc394cc7aa91a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Contact
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: a012dd78b80892a429ab0bb6da8ac0c0
+    layerID: 378
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: tatermand@gmail.com
+    spriteName: tatermand@gmail.com
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 2e02f79cd3f1c754e81f450b4fe93995
+    layerID: 377
+    mosaicPosition: {x: 1399, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: opengameart.org/users/tatermand
+    spriteName: opengameart.org/users/tatermand
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 47d56d2e55cd0164ba90d21719628a7b
+    layerID: 376
+    mosaicPosition: {x: 4, y: 1762}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rectangle 1
+    spriteName: Rectangle 1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 065b0c665405aca45af6c323ad4becf4
+    layerID: 375
+    mosaicPosition: {x: 4056, y: 902}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ion
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 2859dbfb91542fb4e846e31f2700aa7e
+    layerID: 345
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Red
+    spriteName: 
+    isGroup: 1
+    parentIndex: 4
+    spriteID: f50839ee1ab8b1c40a14ff458107dce0
+    layerID: 354
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 8b5b01a6a2216874787f984c2cefbf1e
+    layerID: 353
+    mosaicPosition: {x: 2702, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 8767aaa9d7f98c345b8c8caa143f8617
+    layerID: 352
+    mosaicPosition: {x: 4, y: 2206}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blue
+    spriteName: 
+    isGroup: 1
+    parentIndex: 4
+    spriteID: dd571104637ba094f975f1bab89de65b
+    layerID: 348
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 8
+    spriteID: a46d081e442b24a4db65bdff2e4da829
+    layerID: 340
+    mosaicPosition: {x: 2882, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 8
+    spriteID: e4703345a2a82e24da633ac83dfa35e0
+    layerID: 339
+    mosaicPosition: {x: 233, y: 2206}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Gas
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: cca4d74390830754286620fbfd593526
+    layerID: 313
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blue
+    spriteName: 
+    isGroup: 1
+    parentIndex: 11
+    spriteID: 50cf05225fc702d4eb41d81db46a9ad7
+    layerID: 323
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 266a23daa1aecc14db34a48e7283efad
+    layerID: 319
+    mosaicPosition: {x: 2376, y: 2046}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 12
+    spriteID: b01fc1ba62816384fbfbb7a2dcc0660d
+    layerID: 312
+    mosaicPosition: {x: 346, y: 2598}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Green
+    spriteName: 
+    isGroup: 1
+    parentIndex: 11
+    spriteID: 852a92eac90d2d046b1e4d1dcc28877a
+    layerID: 325
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 63c490b2d3f708143ae3597e366fb0ea
+    layerID: 320
+    mosaicPosition: {x: 2882, y: 2060}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 2b011878687002a4f87aba2eb11d3090
+    layerID: 317
+    mosaicPosition: {x: 466, y: 2598}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Red
+    spriteName: 
+    isGroup: 1
+    parentIndex: 11
+    spriteID: 092e75bde1c1506479780e17b2e870a3
+    layerID: 327
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 18
+    spriteID: d46084c6d50944145a8e838f1bfc756a
+    layerID: 318
+    mosaicPosition: {x: 2702, y: 2060}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 18
+    spriteID: e9c65ec4d8b7b1845bdbd119e28ca816
+    layerID: 315
+    mosaicPosition: {x: 586, y: 2598}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Random
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 095cf58793c97544cb8e3e5bbbc75c6c
+    layerID: 308
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Green Fragments
+    spriteName: Green Fragments
+    isGroup: 0
+    parentIndex: 21
+    spriteID: 8513fb1548bb91043afb59a4d4d96e60
+    layerID: 311
+    mosaicPosition: {x: 4, y: 2598}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Violent Fragments
+    spriteName: Violent Fragments
+    isGroup: 0
+    parentIndex: 21
+    spriteID: 2c1745d97e914d247a127a008afb11e9
+    layerID: 307
+    mosaicPosition: {x: 118, y: 2598}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blue Fragments
+    spriteName: Blue Fragments
+    isGroup: 0
+    parentIndex: 21
+    spriteID: 7e2fba92b4c54954c8be0877c2387b55
+    layerID: 305
+    mosaicPosition: {x: 232, y: 2598}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blue Swirl
+    spriteName: Blue Swirl
+    isGroup: 0
+    parentIndex: 21
+    spriteID: 0fb8b2538e64a9f489bcf060c4a66827
+    layerID: 241
+    mosaicPosition: {x: 1106, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bullet
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ae1ce71559b9c1f48ae9752cb4f4ac6e
+    layerID: 280
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Violet Plazma
+    spriteName: 
+    isGroup: 1
+    parentIndex: 26
+    spriteID: 3bad6c67460625f48b2cd4183715df7d
+    layerID: 371
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 14
+    spriteName: Layer 14
+    isGroup: 0
+    parentIndex: 27
+    spriteID: d495148eb08d29c4fa06bef001a1f1cb
+    layerID: 369
+    mosaicPosition: {x: 805, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 13
+    spriteName: Layer 13
+    isGroup: 0
+    parentIndex: 27
+    spriteID: 2dddf22692ae03a42a4e40a573e2e176
+    layerID: 368
+    mosaicPosition: {x: 462, y: 2206}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Yellow Plazma
+    spriteName: 
+    isGroup: 1
+    parentIndex: 26
+    spriteID: d76e8ca44a2f6f842b36de92e99c5d77
+    layerID: 366
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 9
+    spriteName: Layer 9
+    isGroup: 0
+    parentIndex: 30
+    spriteID: acf5bdc21cbfa524f9780fa174b5823a
+    layerID: 356
+    mosaicPosition: {x: 2050, y: 1958}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 12
+    spriteName: Layer 12
+    isGroup: 0
+    parentIndex: 30
+    spriteID: 3c18c0ab2410af941b998f24927731b6
+    layerID: 365
+    mosaicPosition: {x: 2188, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Colored
+    spriteName: 
+    isGroup: 1
+    parentIndex: 26
+    spriteID: cdeeccb295da06743bbf079ef06a036a
+    layerID: 301
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Rounded Rectangle 1 copy 2
+    spriteName: Rounded Rectangle 1 copy 2
+    isGroup: 0
+    parentIndex: 33
+    spriteID: e1450e318a949af4bb44dd3a0c220dad
+    layerID: 289
+    mosaicPosition: {x: 4022, y: 1154}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rounded Rectangle 1 copy
+    spriteName: Rounded Rectangle 1 copy
+    isGroup: 0
+    parentIndex: 33
+    spriteID: e48921f04503cde4990efe3cbfb5516b
+    layerID: 288
+    mosaicPosition: {x: 4044, y: 1154}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rounded Rectangle 1
+    spriteName: Rounded Rectangle 1
+    isGroup: 0
+    parentIndex: 33
+    spriteID: 4013efcbb71687b41be9774097fe6c13
+    layerID: 286
+    mosaicPosition: {x: 4066, y: 1154}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 8 copy 2
+    spriteName: Layer 8 copy 2
+    isGroup: 0
+    parentIndex: 33
+    spriteID: 9331510941b6dcb4199f7c21d04e92a9
+    layerID: 295
+    mosaicPosition: {x: 3062, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hard body
+    spriteName: 
+    isGroup: 1
+    parentIndex: 26
+    spriteID: 360167614bf97c249bb758f0b23e3aa7
+    layerID: 299
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 7
+    spriteName: Layer 7
+    isGroup: 0
+    parentIndex: 38
+    spriteID: dac6ef76d9a976b499fcf5257c3782e4
+    layerID: 279
+    mosaicPosition: {x: 877, y: 2206}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 2 copy 2
+    spriteName: Layer 2 copy 2
+    isGroup: 0
+    parentIndex: 38
+    spriteID: 89fff8d695d69104b97d7fee3f7b6597
+    layerID: 276
+    mosaicPosition: {x: 697, y: 2206}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fireball
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e7c8fad619a1de84c9d8a782d5960db2
+    layerID: 196
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Blue
+    spriteName: 
+    isGroup: 1
+    parentIndex: 41
+    spriteID: 8511eb1cad6fa13449766063ffec0376
+    layerID: 236
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Particles
+    spriteName: Particles
+    isGroup: 0
+    parentIndex: 42
+    spriteID: b8434bebeab5c9e46822c07bd3224af1
+    layerID: 235
+    mosaicPosition: {x: 4066, y: 1227}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Particles
+    spriteName: Particles
+    isGroup: 0
+    parentIndex: 42
+    spriteID: b9523654fd5990b4f89a72b7b1dcff14
+    layerID: 234
+    mosaicPosition: {x: 4022, y: 794}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hard Projectile
+    spriteName: Hard Projectile
+    isGroup: 0
+    parentIndex: 42
+    spriteID: b86533ec3ce6bc744b1bf1c9974f14d3
+    layerID: 233
+    mosaicPosition: {x: 3768, y: 562}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sof Projectile
+    spriteName: Sof Projectile
+    isGroup: 0
+    parentIndex: 42
+    spriteID: c0220815f5afab64b973d70976d6e2ae
+    layerID: 232
+    mosaicPosition: {x: 4, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 42
+    spriteID: eebf272e189c74a47adb72867e51f92d
+    layerID: 231
+    mosaicPosition: {x: 3512, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 42
+    spriteID: a48524ce189626b4b9f30ba66bd2bcf2
+    layerID: 230
+    mosaicPosition: {x: 3512, y: 562}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Green
+    spriteName: 
+    isGroup: 1
+    parentIndex: 41
+    spriteID: cfb0583e9a5427144977390aa36d64ab
+    layerID: 228
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Particles
+    spriteName: Particles
+    isGroup: 0
+    parentIndex: 49
+    spriteID: bd035cd2fa7218049ab60c96d0d94fc5
+    layerID: 227
+    mosaicPosition: {x: 4056, y: 860}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Particles
+    spriteName: Particles
+    isGroup: 0
+    parentIndex: 49
+    spriteID: 5a556d88bcc78614fb35363c039f6c85
+    layerID: 226
+    mosaicPosition: {x: 4022, y: 860}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hard Projectile
+    spriteName: Hard Projectile
+    isGroup: 0
+    parentIndex: 49
+    spriteID: 8f251423b95287b4ea7c20f326e5c7ef
+    layerID: 225
+    mosaicPosition: {x: 3768, y: 930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sof Projectile
+    spriteName: Sof Projectile
+    isGroup: 0
+    parentIndex: 49
+    spriteID: bc3eea8dbfacfbb4daa0664fa92125c0
+    layerID: 224
+    mosaicPosition: {x: 271, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 49
+    spriteID: 53ff162715edd5d438962a90b5addcc1
+    layerID: 223
+    mosaicPosition: {x: 3512, y: 190}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 49
+    spriteID: b57f88c8cbf2789448a7096924c198f4
+    layerID: 222
+    mosaicPosition: {x: 3512, y: 930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Orange
+    spriteName: 
+    isGroup: 1
+    parentIndex: 41
+    spriteID: 7cec4938417a4924f9fb90077e7f140b
+    layerID: 219
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Particles
+    spriteName: Particles
+    isGroup: 0
+    parentIndex: 56
+    spriteID: 2ed7d9d24eb19a543887ea9efbc18528
+    layerID: 209
+    mosaicPosition: {x: 3062, y: 2125}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Particles
+    spriteName: Particles
+    isGroup: 0
+    parentIndex: 56
+    spriteID: 683dd2c507afab241abcf18aec13e0e9
+    layerID: 208
+    mosaicPosition: {x: 4056, y: 794}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hard Projectile
+    spriteName: Hard Projectile
+    isGroup: 0
+    parentIndex: 56
+    spriteID: e220d80a34f8a6e4fb65921651b0d6e3
+    layerID: 199
+    mosaicPosition: {x: 3768, y: 1298}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sof Projectile
+    spriteName: Sof Projectile
+    isGroup: 0
+    parentIndex: 56
+    spriteID: c62d03337dd1b2d499249ca34029e86d
+    layerID: 212
+    mosaicPosition: {x: 538, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 56
+    spriteID: 93cc29c557c2a5e44af22d7517202612
+    layerID: 207
+    mosaicPosition: {x: 3512, y: 376}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 56
+    spriteID: 5973a57408f64594eb0202d78b72bf23
+    layerID: 218
+    mosaicPosition: {x: 3512, y: 1298}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Plazma Arrow
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: e1ec43c182d3b0343a0727418fca360d
+    layerID: 184
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Violent
+    spriteName: 
+    isGroup: 1
+    parentIndex: 63
+    spriteID: 569cf8407c5b76541a1b35535d346736
+    layerID: 107
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 469d05ff8a77d7546ac5936f8d1d0ec3
+    layerID: 113
+    mosaicPosition: {x: 3995, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 05181cb5287ea5949b6e773062626bb4
+    layerID: 106
+    mosaicPosition: {x: 4022, y: 930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 8193cb09e8c34a043822315540dce2f5
+    layerID: 105
+    mosaicPosition: {x: 4022, y: 190}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Halo
+    spriteName: Halo
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 23b55f91892cd6145bd1749423ae8e0c
+    layerID: 104
+    mosaicPosition: {x: 3420, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Red
+    spriteName: 
+    isGroup: 1
+    parentIndex: 63
+    spriteID: 35efeef7fea4bcb499936b76dc2ce71f
+    layerID: 101
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 69
+    spriteID: bfc14ef7aaac5014e911330f0ee4e0c3
+    layerID: 112
+    mosaicPosition: {x: 3896, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 69
+    spriteID: 25cad8e533b74da4b89bec720d5fe6cd
+    layerID: 100
+    mosaicPosition: {x: 4022, y: 562}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 69
+    spriteID: f50b25f0bf8890640a739c92c169cb5f
+    layerID: 99
+    mosaicPosition: {x: 4022, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Halo
+    spriteName: Halo
+    isGroup: 0
+    parentIndex: 69
+    spriteID: 26560d49d9de56b42907eb7e3d531a4e
+    layerID: 98
+    mosaicPosition: {x: 3179, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blue
+    spriteName: 
+    isGroup: 1
+    parentIndex: 63
+    spriteID: 1d0dee15ab24b294283372bf63cb3122
+    layerID: 95
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 74
+    spriteID: c632a01694bb15846afabe9716b5779d
+    layerID: 111
+    mosaicPosition: {x: 3768, y: 1666}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 74
+    spriteID: a56065806dacc2141912241e40c38e54
+    layerID: 74
+    mosaicPosition: {x: 4022, y: 1298}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 74
+    spriteID: 0e55df47fc3391a47b9f76c44ca66010
+    layerID: 72
+    mosaicPosition: {x: 4022, y: 376}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Halo
+    spriteName: Halo
+    isGroup: 0
+    parentIndex: 74
+    spriteID: 070706924d9624d4da91462947a8e039
+    layerID: 81
+    mosaicPosition: {x: 3301, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Plazma Elipse
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 0fe4d281e8ee1e64fba17caf15790be3
+    layerID: 182
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Green
+    spriteName: 
+    isGroup: 1
+    parentIndex: 79
+    spriteID: d60e6c7279347824e8eb175df4ea32bf
+    layerID: 156
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 80
+    spriteID: 2300562e9806b6e4d90b747cc937da31
+    layerID: 181
+    mosaicPosition: {x: 2376, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 80
+    spriteID: ad1f247bece8d394cb5a785896b52c52
+    layerID: 155
+    mosaicPosition: {x: 3538, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 80
+    spriteID: 8ba4d35016b0cc84d8f34213ef4e2d54
+    layerID: 152
+    mosaicPosition: {x: 346, y: 3014}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Red
+    spriteName: 
+    isGroup: 1
+    parentIndex: 79
+    spriteID: 8ab3d09b70b7329438d64142e8bffd74
+    layerID: 147
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 84
+    spriteID: 5daecd4a4bc30004d8391bb8812b65a1
+    layerID: 178
+    mosaicPosition: {x: 1725, y: 1958}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 84
+    spriteID: 4b2e912053e1cd041aca9af33acc1f55
+    layerID: 144
+    mosaicPosition: {x: 3777, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 84
+    spriteID: 10fd1f5c8d2696f4c85011ee0414900c
+    layerID: 146
+    mosaicPosition: {x: 466, y: 3014}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Blue
+    spriteName: 
+    isGroup: 1
+    parentIndex: 79
+    spriteID: 2f405c9dfb06bf643978e5de46f35221
+    layerID: 164
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Splash
+    spriteName: Splash
+    isGroup: 0
+    parentIndex: 88
+    spriteID: 115cc8e9966990147bdaf339c3467abe
+    layerID: 168
+    mosaicPosition: {x: 1399, y: 1958}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Projectile
+    spriteName: Projectile
+    isGroup: 0
+    parentIndex: 88
+    spriteID: 07749bd4d39e20e4b8a01cbf14577d5e
+    layerID: 161
+    mosaicPosition: {x: 3657, y: 1869}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fire
+    spriteName: Fire
+    isGroup: 0
+    parentIndex: 88
+    spriteID: 9f5b10f2742cc57479b10b7bdb8e3bf5
+    layerID: 158
+    mosaicPosition: {x: 2546, y: 2046}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Color Fill 1
+    spriteName: Color Fill 1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8b6f32482e0fca542afdc394cc7aa91a
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

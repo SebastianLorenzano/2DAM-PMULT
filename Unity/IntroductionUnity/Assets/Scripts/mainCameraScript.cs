@@ -8,25 +8,28 @@ public class mainCameraScript : MonoBehaviour
     public static float Height => 2 * Camera.main.orthographicSize;
     public static float X => Camera.main.transform.position.x - Width / 2;
     public static float Y => Camera.main.transform.position.y - Height / 2;
+    [SerializeField] public int level = 1;
+    public UnityEngine.UI.Text txtEnd;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-    }
-    /*
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
+        int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        if (enemyCount == 0)
         {
-            if (collision.gameObject.transform.position.x < gameObject.transform.position.x)
-               
+            if (level == 1)
+                gameObject.GetComponent<SceneLoader>().LaunchLevel2();
+            else if (level == 2)
+            {
+                txtEnd.text = "You win!";
+                txtEnd.enabled = true;
+            
+            }           
         }
     }
-    */
+
 }

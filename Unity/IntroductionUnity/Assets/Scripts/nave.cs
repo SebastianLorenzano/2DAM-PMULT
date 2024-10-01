@@ -11,9 +11,13 @@ public class Nave : MonoBehaviour
     [SerializeField] private float xSpeed = 2.0f;
     [SerializeField] private float ySpeed = 3.0f;
     [SerializeField] private int health = 3;
+    [SerializeField] protected Transform prefabExplotion;
+    [SerializeField] protected Transform prefabDeathExplotion;
     public static int Points = 0;
     public float Width { get; private set; }
     public float Height { get; private set; }
+    public bool isInvulnerable = false;
+    private SpriteRenderer spriteRenderer;                      // This allows me to change the opacity of the sprite
 
 
     public UnityEngine.UI.Text txtStats;
@@ -24,6 +28,7 @@ public class Nave : MonoBehaviour
     void Start()
     {
         txtEnd.enabled = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -46,7 +51,8 @@ public class Nave : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            var disparo = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
+            var shot = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
+            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -54,17 +60,41 @@ public class Nave : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision != null)
+        if (collision != null && !isInvulnerable)
         {
-            if (collision.tag == "Enemy" || collision.tag == "EnemyBullet")
-                health--;
-            if (health < 0)
+            if (collision.tag == "Enemy" || collision.tag == "EnemyBullet" || collision.tag == "Asteroid")
             {
-                txtEnd.enabled = true;
-                txtEnd.text = "Game Over";
-                Destroy(gameObject);
+                health--;
+                if (health >= 0)
+                {
+                    StartCoroutine(TemporalInvulnerability());
+                    Transform explosion = Instantiate(prefabExplotion,
+                    transform.position, Quaternion.identity);
+                    Destroy(explosion.gameObject, 1f);
+                }
+
             }
-                
         }
+        if (health < 0)
+        {
+            Transform explosion = Instantiate(prefabDeathExplotion,
+            transform.position, Quaternion.identity);
+            Destroy(explosion.gameObject, 1f);
+            txtEnd.enabled = true;
+            txtEnd.text = "Game Over";
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator TemporalInvulnerability()
+    {
+        Color color = spriteRenderer.color;
+        isInvulnerable = true;
+        color.a = Mathf.Clamp01(0.5f);
+        spriteRenderer.color = color;
+        yield return new WaitForSeconds(1.0f);
+        isInvulnerable = false;
+        color.a = 1.0f;
+        spriteRenderer.color = color;
     }
 }

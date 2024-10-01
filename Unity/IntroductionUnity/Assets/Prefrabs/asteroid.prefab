@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 2382330172069178676}
   - component: {fileID: 2367854419710846298}
   - component: {fileID: 4756426569291392250}
-  - component: {fileID: 3730621015883858249}
   m_Layer: 0
   m_Name: asteroid
-  m_TagString: Enemy
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,15 +100,3 @@ MonoBehaviour:
   prefabExplotion: {fileID: 9120999571209266398, guid: 52b7bc4a37318b74289e7d556e98dfa3, type: 3}
   prefabAsteroid: {fileID: 2382330172069178676}
   ySpeed: -1
---- !u!114 &3730621015883858249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5347529960180744293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d944b3487f559e14c8f97121431c8d61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

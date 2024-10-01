@@ -33,8 +33,9 @@ public class Asteroid : MonoBehaviour
                 Transform explosion = Instantiate(prefabExplotion,
                 collision.transform.position, Quaternion.identity);
                 Destroy(explosion.gameObject, 1f);
-                Destroy(gameObject);
             }
+            else if (collision.tag == "AllyBullet")
+                Destroy(collision.gameObject);
         }
     }
 
@@ -44,5 +45,10 @@ public class Asteroid : MonoBehaviour
         float pause = Random.Range(1.5f, 3.0f);
         yield return new WaitForSeconds(pause);
         Instantiate(prefabAsteroid, new Vector3(0, 0, 0), Quaternion.identity);
+    }
+
+    private void IsHit()
+    {
+
     }
 }

@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 220652701202066877, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 220652701202066877, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 220652701202066877, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 220652701202066877, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.16
+      objectReference: {fileID: 0}
     - target: {fileID: 4559118003976642245, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
       propertyPath: m_Name
       value: DisparoAlly Variant
@@ -15,6 +31,14 @@ PrefabInstance:
     - target: {fileID: 4559118003976642245, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
       propertyPath: m_TagString
       value: AllyBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003932545726010353, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003932545726010353, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5003932545726010353, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +80,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8808218158514459019, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808218158514459019, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_Size.y
+      value: 3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808218158514459019, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3412973947302118417, guid: ebf297fbbd1020445a72bb59cb597774, type: 3}
+    - target: {fileID: 8808218158514459019, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5216324336859559010, guid: f6855249e87f2c145917b03a7dfd4bd3, type: 3}
     m_RemovedGameObjects: []
@@ -82,5 +122,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47102fe304aef3943a951f1af802e7bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 3
+  bulletSpeed: 5
   prefabExplotion: {fileID: 9120999571209266398, guid: 52b7bc4a37318b74289e7d556e98dfa3, type: 3}
