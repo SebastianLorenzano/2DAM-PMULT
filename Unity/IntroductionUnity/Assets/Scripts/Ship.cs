@@ -71,7 +71,6 @@ public class Nave : MonoBehaviour
                     transform.position, Quaternion.identity);
                     Destroy(explosion.gameObject, 1f);
                 }
-
             }
         }
         if (health < 0)                         // This if is outside because it caused discrepencies when it was inside

@@ -33,8 +33,7 @@ public class enemy : MonoBehaviour
         {
             ySpeed = -ySpeed;
             transform.Translate(0, ySpeed, 0);
-        }
-            
+        }       
     }
 
     IEnumerator Shoot()     //After a few seconds it shoots

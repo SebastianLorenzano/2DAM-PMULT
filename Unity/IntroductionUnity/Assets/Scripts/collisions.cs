@@ -3,15 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-
-public enum Direction
-{
-    TOP = 1,
-    RIGHT = 2,
-    BOTTOM = 3,
-    LEFT = 4
-}
-
 public class CollisionWrapper           //This item is a wrapper which holds the booleans from which directions a gameObject is outside the bounds of the map
 {
     public bool CollidingWithWest { get; set; } = false;
