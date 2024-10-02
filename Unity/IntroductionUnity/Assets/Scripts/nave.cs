@@ -7,34 +7,33 @@ using UnityEngine;
 
 public class Nave : MonoBehaviour
 {
-    [SerializeField] Transform prefabDisparo;
+
     [SerializeField] private float xSpeed = 2.0f;
     [SerializeField] private float ySpeed = 3.0f;
-    [SerializeField] private int health = 3;
-    [SerializeField] protected Transform prefabExplotion;
-    [SerializeField] protected Transform prefabDeathExplotion;
-    public static int Points = 0;
-    public float Width { get; private set; }
-    public float Height { get; private set; }
-    public bool isInvulnerable = false;
+    [SerializeField] private int health = 4;
+    [SerializeField] Transform prefabBullet;                    // This is the prefab of the bullet
+    [SerializeField] protected Transform prefabExplotion;       // This is the prefab of the explotion
+    [SerializeField] protected Transform prefabDeathExplotion;  // This is the prefab of the death explotion
+    public static int points = 0;                               // Amount of points the player has
+    public bool isInvulnerable = false;                         // Checks if the object should recieve damage or not
     private SpriteRenderer spriteRenderer;                      // This allows me to change the opacity of the sprite
 
 
-    public UnityEngine.UI.Text txtStats;
-    public UnityEngine.UI.Text txtEnd;
+    public UnityEngine.UI.Text txtStats;                        // This text is the one that indicates the player's health and points
+    public UnityEngine.UI.Text txtEnd;                          // This text is the one that indicates that the player lost
 
 
     // Start is called before the first frame update
     void Start()
     {
-        txtEnd.enabled = false;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        txtEnd.enabled = false;                                 // It is iniciated as false and when the player lost it is enabled
+        spriteRenderer = GetComponent<SpriteRenderer>();        // Shortway to get object's SpriteRenderer
     }
 
     // Update is called once per frame
     void Update()
     {
-        txtStats.text = "Health = " + health + "\nPoints: " + Points;
+        txtStats.text = "Health = " + health + "\nPoints: " + points;       //Updates text in screen
 
 
         float x1 = Input.GetAxis("Horizontal");
@@ -43,31 +42,31 @@ public class Nave : MonoBehaviour
         float x2 = x1 * xSpeed * Time.deltaTime;
         float y2 = y1 * ySpeed * Time.deltaTime;
 
-        CollisionWrapper collision = Collisions.IsOutOfBounds(gameObject);
-        if (x1 > 0 && !collision.CollidingWithEast || x1 < 0 && !collision.CollidingWithWest)
+        CollisionWrapper collision = Collisions.IsOutOfBounds(gameObject);                      // Checks for collisions
+        if (x1 > 0 && !collision.CollidingWithEast || x1 < 0 && !collision.CollidingWithWest)   // Only moves if there is no collisions in that direction
             transform.Translate(x2, 0, 0);
         if (y1 > 0 && !collision.CollidingWithNorth || y1 < 0 && !collision.CollidingWithSouth)
             transform.Translate(0, y2, 0);
 
         if (Input.GetButtonDown("Fire1"))
         {
-            var shot = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
-            GetComponent<AudioSource>().Play();
+            var shot = Instantiate(prefabBullet, transform.position, Quaternion.identity);      // Creates bullet
+            GetComponent<AudioSource>().Play();                                                 // Creates bullet's sound
         }
     }
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)  //It triggers when it collides with something
     {
-        if (collision != null && !isInvulnerable)
+        if (collision != null && !isInvulnerable)       // When he is invulnerable, he cannot lose HP
         {
             if (collision.tag == "Enemy" || collision.tag == "EnemyBullet" || collision.tag == "Asteroid")
             {
                 health--;
                 if (health >= 0)
                 {
-                    StartCoroutine(TemporalInvulnerability());
+                    StartCoroutine(TemporalInvulnerability());          // If its damaged, it is invulnerable
                     Transform explosion = Instantiate(prefabExplotion,
                     transform.position, Quaternion.identity);
                     Destroy(explosion.gameObject, 1f);
@@ -75,7 +74,7 @@ public class Nave : MonoBehaviour
 
             }
         }
-        if (health < 0)
+        if (health < 0)                         // This if is outside because it caused discrepencies when it was inside
         {
             Transform explosion = Instantiate(prefabDeathExplotion,
             transform.position, Quaternion.identity);
@@ -86,15 +85,16 @@ public class Nave : MonoBehaviour
         }
     }
 
-    private IEnumerator TemporalInvulnerability()
-    {
-        Color color = spriteRenderer.color;
+    private IEnumerator TemporalInvulnerability()       // It makes the object invulnerable and sets its opacity to 0.5f
+    {                                                   // for 1 second, then it comes back to normal
+
+        Color color = spriteRenderer.color;             // Gets spriteRenderer's color
         isInvulnerable = true;
-        color.a = Mathf.Clamp01(0.5f);
-        spriteRenderer.color = color;
+        color.a = Mathf.Clamp01(0.5f);                  // Makes sure number is between 0 and 1
+        spriteRenderer.color = color;                   // Then assigns it back
         yield return new WaitForSeconds(1.0f);
         isInvulnerable = false;
         color.a = 1.0f;
-        spriteRenderer.color = color;
+        spriteRenderer.color = color;                   // Assigns it back to original
     }
 }

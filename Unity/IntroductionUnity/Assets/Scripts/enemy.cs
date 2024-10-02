@@ -4,35 +4,28 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-    [SerializeField] private float xSpeed = 2f;
+    [SerializeField] private float xSpeed = -2f;         
     [SerializeField] private float ySpeed = -0.001f;
     [SerializeField] Transform prefabEnemyBullet;
-    private bool HasHitBounds = false;
+    private bool HasHitBounds = false;                  
 
 
     void Start()
     {
-        int random;
         StartCoroutine(Shoot());
-        if (Random.Range(-1, 1) > 0)
-            random = 1;
-        else
-            random = -1;
-        xSpeed *= random;
     }
 
 
     void Update()
     {
-
-        transform.Translate(xSpeed * Time.deltaTime, 0, 0);
-        CollisionWrapper collision = Collisions.IsOutOfBounds(gameObject);
+        transform.Translate(xSpeed * Time.deltaTime, 0, 0);                         // Enemy moves
+        CollisionWrapper collision = Collisions.IsOutOfBounds(gameObject);          // Enemy checks for collision
         var x = transform.position.x;
         var y = transform.position.y;
-        if (x > 0 && collision.CollidingWithEast && !HasHitBounds || x < 0 && collision.CollidingWithWest && !HasHitBounds)
+        if (x > 0 && collision.CollidingWithEast && !HasHitBounds || x < 0 && collision.CollidingWithWest && !HasHitBounds) //If it collides, it changes positions
         {
             StartCoroutine(HitBounds());
-        xSpeed = -xSpeed;
+            xSpeed = -xSpeed;
             transform.Translate(0, ySpeed, 0);
         }
             
@@ -44,17 +37,17 @@ public class enemy : MonoBehaviour
             
     }
 
-    IEnumerator Shoot()
+    IEnumerator Shoot()     //After a few seconds it shoots
     {
         float pause = Random.Range(2.0f, 5.0f);
         yield return new WaitForSeconds(pause);
         Transform disparo = Instantiate(prefabEnemyBullet, transform.position, Quaternion.identity);
-        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().Play();         //Plays shot's audio
         StartCoroutine(Shoot());
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)     
     {
         if (collision != null)
         {
@@ -64,17 +57,17 @@ public class enemy : MonoBehaviour
         }
     }
 
-    private IEnumerator HitBounds()
+    public void IsHit()
+    {
+        Nave.points += 10;
+        Destroy(gameObject);
+    }
+
+    private IEnumerator HitBounds()             //This makes sure it doesn't hit the wall multiple times, and can only hit it once
     {
         HasHitBounds = true;
         yield return new WaitForSeconds(1.0f);
         HasHitBounds = false;
 
-    }
-
-    public void IsHit()
-    {
-        Nave.Points += 10;
-        Destroy(gameObject);
     }
 }

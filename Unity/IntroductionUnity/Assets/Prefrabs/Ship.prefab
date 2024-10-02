@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98983cf28c0b6a40ac20b270eeb4c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabDisparo: {fileID: 7305436595796999511, guid: 0cfd6c4d4a1d38348969fc8138a933d1, type: 3}
   xSpeed: 5
   ySpeed: 5
   health: 2
+  prefabBullet: {fileID: 7305436595796999511, guid: 0cfd6c4d4a1d38348969fc8138a933d1, type: 3}
   prefabExplotion: {fileID: 9120999571209266398, guid: 52b7bc4a37318b74289e7d556e98dfa3, type: 3}
   prefabDeathExplotion: {fileID: 9120999571209266398, guid: 867cf57a0cf8f21458e3a94013dcf175, type: 3}
   isInvulnerable: 0
