@@ -142,7 +142,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (4)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,7 +199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (3)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -256,7 +256,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (1)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -397,7 +397,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (3)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -671,7 +671,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (4)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -733,7 +733,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (3)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -855,7 +855,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (2)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -917,7 +917,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (4)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1052,7 +1052,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (2)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1162,7 +1162,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (1)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1519,7 +1519,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (2)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1655,7 +1655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2226942621503428287, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_Name
-      value: Enemigo (1)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7169506806682316911, guid: facde0580b42d304c9395da23cf3f217, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1712,7 +1712,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3497032719963403877, guid: 0de516bb7a87c1245937f2e57a55cae0, type: 3}
       propertyPath: m_Name
-      value: Nave
+      value: PlayerSpaceship
       objectReference: {fileID: 0}
     - target: {fileID: 5102720387234538628, guid: 0de516bb7a87c1245937f2e57a55cae0, type: 3}
       propertyPath: m_LocalPosition.x
