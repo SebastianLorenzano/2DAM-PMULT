@@ -5,23 +5,9 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    /*
-    private Rigidbody body;
-    float speed = 200f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Recogemos el Rigidbody del objeto
-        body = GetComponent<Rigidbody>();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        float newX = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        float newZ = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        body.velocity = new Vector3(newX, 0, newZ);
-    }
-    */
+    private Rigidbody rb;
+
+    public float speed;
 
     // Este script es otra forma de mover la bola
     float velocidadAvance = 2.0f; // 2 m/s
@@ -29,9 +15,25 @@ public class Ball : MonoBehaviour
                                    // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
 
     }
     // Update is called once per frame
+
+    void FixedUpdate()
+    {
+        // Recogemos el valor de las flechas
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        // Creamos un Vector3 X será el horizontal y Z el vertica
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f,
+        moveVertical);
+        // Aplicamos una fuerza teniendo en cuenta los ejes y la velocidad
+        rb.AddForce(movement * speed);
+    }
+
+
+    /*
     void Update()
     {
         // Para coger el avance con las flechas adelante y atrás
@@ -43,4 +45,5 @@ public class Ball : MonoBehaviour
         transform.Translate(Vector3.forward * avance);
         transform.Rotate(Vector3.up * rotacion);
     }
+    */
 }
