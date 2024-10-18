@@ -9,8 +9,8 @@ public class MakeSmallerOnCollision : MonoBehaviour
                                         // Its public so each wall can decide how they want to change it
     private float changeWallSize = -2;    //How much the wall is going to reduce its scale when it collisions  
     private float minWallSize = 4;
-    private float maxPlayerSize = 4;
-    private float minPlayerSize = 0.4f;
+    private float maxPlayerSize = 3;
+    private float minPlayerSize = 0.6f;
 
     void Start()
     {
@@ -29,14 +29,12 @@ public class MakeSmallerOnCollision : MonoBehaviour
         {
             float newSizeYWall = transform.localScale.y + changeWallSize;
             float newSizeYPlayer = collision.transform.localScale.y + changePlayerSize;
-            Debug.Log("Colliding");
-            if (newSizeYPlayer < maxPlayerSize && newSizeYPlayer > minPlayerSize)  // It doesn't allow the ball to be bigger or smaller than a limit
-            {
-                Debug.Log("Changing Player");
+            if (newSizeYWall > minWallSize && newSizeYPlayer < maxPlayerSize && newSizeYPlayer > minPlayerSize)  // It doesn't allow the ball to be bigger or smaller than a limit
+            {                                                                                                    // It doesn't allow the wall to be smaller than a limit
+                transform.localScale = ChangeSize(gameObject, changeWallSize);
+                collision.gameObject.GetComponent<Renderer>().material.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
                 collision.transform.localScale = ChangeSize(collision.gameObject, changePlayerSize);
             }
-            if (newSizeYWall > minWallSize)   // It doesn't allow the wall to be smaller than a limit
-                transform.localScale = ChangeSize(gameObject, changeWallSize);
         }
 
     }

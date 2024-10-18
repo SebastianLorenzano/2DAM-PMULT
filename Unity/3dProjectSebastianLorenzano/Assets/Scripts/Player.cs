@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public int health = 3;
     public float jumpStrength;
     public float speed;
     public Text countText;
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     private Renderer r;
     private int pickUpCount;
+    [SerializeField] protected Transform prefabCollisionWall;       // This is the prefab of the explotion
+    [SerializeField] protected Transform prefabCollisionPickup;  // This is the prefab of the death explotion
     public int PickUpCount => pickUpCount;
 
     // Este script es otra forma de mover la bola
@@ -34,6 +37,21 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
         }
+
+        if (transform.position.y <= -25)
+        {
+            health--;
+            if (health <= 0)
+                winText.text = "You lose!";
+            else
+            {
+                transform.position = new Vector3(0, 4, 0);
+                rb.velocity = new Vector3(0, 0, 0);
+            }
+                
+        }
+            
+       
     }
 
     void FixedUpdate()
@@ -55,13 +73,24 @@ public class Player : MonoBehaviour
             other.gameObject.SetActive(false);
             pickUpCount++;
             SetCountText();
+            Transform explosion = Instantiate(prefabCollisionPickup, transform.position, Quaternion.identity);
+            Destroy(explosion.gameObject, 1f);
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
-            r.material.color = new Color(UnityEngine.Random.value, UnityEngine.Random.value,
-            UnityEngine.Random.value);
+        {
+            Transform explosion = Instantiate(prefabCollisionWall, transform.position, Quaternion.identity);
+            Destroy(explosion.gameObject, 0.5f);
+        }
+        else if (collision.gameObject.CompareTag("WallNoCollision"))
+        {
+            Transform explosion = Instantiate(prefabCollisionWall, transform.position, Quaternion.identity);
+            Destroy(explosion.gameObject, 0.5f);
+        }
+
     }
 
 

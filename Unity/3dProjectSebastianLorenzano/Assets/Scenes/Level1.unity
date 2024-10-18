@@ -1791,10 +1791,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1680367243}
     m_Modifications:
-    - target: {fileID: 1202855139382285995, guid: ae9d7b28b05bd534d9ac85e84fc3fed4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 11c96a58ad226394abb883bcbeaabb70, type: 2}
     - target: {fileID: 6154088249754196543, guid: ae9d7b28b05bd534d9ac85e84fc3fed4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.46
@@ -1866,8 +1862,16 @@ PrefabInstance:
       objectReference: {fileID: 1108770476}
     - target: {fileID: 2923292176271955211, guid: 54d0be7b8556d2e4095e81c79de0617a, type: 3}
       propertyPath: jumpStrength
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2923292176271955211, guid: 54d0be7b8556d2e4095e81c79de0617a, type: 3}
+      propertyPath: prefabCollisionWall
+      value: 
+      objectReference: {fileID: 8156259917769082497, guid: af17349ce12f2754e9b2d4bf37ca7e80, type: 3}
+    - target: {fileID: 2923292176271955211, guid: 54d0be7b8556d2e4095e81c79de0617a, type: 3}
+      propertyPath: prefabCollisionPickup
+      value: 
+      objectReference: {fileID: 587446369306773160, guid: bfc6b443bf9d5a44eb91ad8ef780d57a, type: 3}
     - target: {fileID: 5084667665356253280, guid: 54d0be7b8556d2e4095e81c79de0617a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
