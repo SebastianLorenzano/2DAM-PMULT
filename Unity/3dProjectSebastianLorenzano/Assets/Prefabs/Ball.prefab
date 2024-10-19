@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 993763417231384728}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c0f3f185b9c163a48bbb69797158f5b8, type: 2}
+  - {fileID: 2100000, guid: 61ada6cc029c6274c8e5aae8d1da193c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +94,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6822669444573683078}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1dd6c293a4d06144f876f59277e91524, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -147,9 +147,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26751db37c42ffc40b5b14c474008433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  health: 1
+  jumpStrength: 10
+  speed: 10
   countText: {fileID: 0}
   winText: {fileID: 0}
+  prefabCollisionWall: {fileID: 8156259917769082497, guid: af17349ce12f2754e9b2d4bf37ca7e80, type: 3}
+  prefabCollisionPickup: {fileID: 587446369306773160, guid: bfc6b443bf9d5a44eb91ad8ef780d57a, type: 3}
 --- !u!135 &993763417231384728
 SphereCollider:
   m_ObjectHideFlags: 0
