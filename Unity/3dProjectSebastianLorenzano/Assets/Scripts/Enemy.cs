@@ -20,12 +20,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         // Nos movemos hacia la siguiente posición
-        transform.position = Vector3.MoveTowards(transform.position,
-        nextPosition,
-       speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
         // Si la distancia al punto es corta cambiamos al siguiente
-        if (Vector3.Distance(transform.position,
-        nextPosition) < changeDistance)
+        if (Vector3.Distance(transform.position, nextPosition) < changeDistance)
         {
             waypointObjetiveNumber += loopDirection;
             if (waypointObjetiveNumber >= wayPoints.Length || waypointObjetiveNumber < 0)
