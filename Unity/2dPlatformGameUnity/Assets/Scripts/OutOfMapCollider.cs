@@ -19,6 +19,6 @@ public class OutOfMapCollider : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null && collision.gameObject.tag == "Player")
-            FindObjectOfType<Player>().SendMessage("SpawnInCheckpoint");
+            FindObjectOfType<SceneController>().SendMessage("PlayerLoseHp");
     }
 }

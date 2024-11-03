@@ -5,18 +5,19 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float speed = 5;
-    [SerializeField] float jumpPower = 20;
-    private Rigidbody2D rb;
+    [SerializeField] float jumpPower = 10;
     private float spawnX = -1.5f, spawnY = 4f;
     private float height;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private bool isGrounded = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         height = GetComponent<Collider2D>().bounds.size.y;
-
-
+        rb = GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
 
@@ -24,20 +25,33 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(0, -1));
+        isGrounded = hit.collider != null && hit.distance < height;
 
         float horizontal = Input.GetAxis("Horizontal");
-        transform.Translate(horizontal * speed * Time.deltaTime, 0, 0);
+        if (horizontal > 0.1f || horizontal < -0.1f)
+        {
+            if (horizontal > 0.1f)
+                transform.localScale = new Vector3(1, 1, 1);
+            else
+                transform.localScale = new Vector3(-1, 1, 1);
+
+            if (isGrounded)                     // Prevents from the running animation being used while jumping
+                animator.Play("Running");
+            transform.Translate(horizontal * speed * Time.deltaTime, 0, 0);
+        }
+
+
         float salto = Input.GetAxis("Jump");
         if (salto > 0)
-            Jump();
-
+            Jump(hit);
     }
 
-    void Jump()
+    void Jump(RaycastHit2D hit)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(0, -1));
-        if (hit.collider != null && hit.distance < height)
+        if (isGrounded)
         {
+            animator.Play("Jumping");
             Vector3 fuerzaSalto = new Vector3(0, jumpPower, 0);
             rb.AddForce(fuerzaSalto);
         }
