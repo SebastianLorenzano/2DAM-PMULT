@@ -572,7 +572,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -597,7 +597,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.862677, y: -0.10927, z: -10}
+  m_LocalPosition: {x: -10.535713, y: -0.110369995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Follow: {fileID: 362652792}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 4
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -833,7 +833,7 @@ Transform:
   m_GameObject: {fileID: 870042532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.1543236, y: 0.0012699962, z: 0}
+  m_LocalPosition: {x: -11.481287, y: 0.0023699924, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53115,7 +53115,15 @@ PrefabInstance:
     - target: {fileID: 531387871678237222, guid: 9031df49fa6fdb94f831a95be9f564d6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1630771930, guid: 88c2a829264b5274a870b8bd0733e0a2, type: 3}
+      objectReference: {fileID: -6367560908665664636, guid: b77772e33563a6d4bac5b6da0cc15bbd, type: 3}
+    - target: {fileID: 818040211589884895, guid: 9031df49fa6fdb94f831a95be9f564d6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 818040211589884895, guid: 9031df49fa6fdb94f831a95be9f564d6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.92
+      objectReference: {fileID: 0}
     - target: {fileID: 1089019311621407739, guid: 9031df49fa6fdb94f831a95be9f564d6, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -53170,7 +53178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8930986772893651228, guid: 9031df49fa6fdb94f831a95be9f564d6, type: 3}
       propertyPath: jumpPower
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

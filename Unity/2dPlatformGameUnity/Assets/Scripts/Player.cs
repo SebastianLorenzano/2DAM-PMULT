@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(0, -1));
         isGrounded = hit.collider != null && hit.distance < height;
 
+
+
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal > 0.1f || horizontal < -0.1f)
         {
@@ -41,19 +43,19 @@ public class Player : MonoBehaviour
             transform.Translate(horizontal * speed * Time.deltaTime, 0, 0);
         }
 
-
-        float salto = Input.GetAxis("Jump");
-        if (salto > 0)
-            Jump(hit);
+        if (Input.GetButtonDown("Jump"))
+            Jump();
     }
 
-    void Jump(RaycastHit2D hit)
+    void Jump()
     {
+        Debug.Log("Trying to jump");
         if (isGrounded)
         {
-            animator.Play("Jumping");
-            Vector3 fuerzaSalto = new Vector3(0, jumpPower, 0);
-            rb.AddForce(fuerzaSalto);
+            Debug.Log("Jumping to jump");
+            animator.SetTrigger("JumpTrigger");
+            Vector3 fuerzaSalto = new Vector2(0, jumpPower);
+            rb.AddForce(fuerzaSalto, ForceMode2D.Impulse);
         }
     }
 
