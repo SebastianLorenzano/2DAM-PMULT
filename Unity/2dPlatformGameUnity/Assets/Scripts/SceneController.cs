@@ -62,7 +62,7 @@ public class SceneController : MonoBehaviour
         }
         else
         {
-            Debug.Log("This is the last level. No more levels to load.");
+            WinGame();
             // Optional: Add additional logic here if needed (e.g., show a message or trigger an event)
         }
     }
@@ -70,6 +70,13 @@ public class SceneController : MonoBehaviour
     private void FinishGame()
     {
         textGameOver.enabled = true;
+        StartCoroutine(LoadMainMenu());
+    }
+
+    private void WinGame()
+    {
+        textGameOver.enabled = true;
+        textGameOver.text = "You WINN!!";
         StartCoroutine(LoadMainMenu());
     }
     private IEnumerator LoadMainMenu()

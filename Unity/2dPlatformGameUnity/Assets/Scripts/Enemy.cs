@@ -25,6 +25,11 @@ public class EnemyBat : MonoBehaviour
     {
         if (wayPoints.Length > 0)
         {
+            if (nextPosition.x > transform.position.x)
+                transform.localScale = new Vector3(-1, 1, 1);
+            else if (nextPosition.x < transform.position.x)
+                        transform.localScale = new Vector3(1, 1, 1);
+
             transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, nextPosition) < changeDistance)
             {
