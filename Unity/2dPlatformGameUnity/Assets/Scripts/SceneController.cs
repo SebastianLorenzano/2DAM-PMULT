@@ -4,13 +4,17 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Purchasing;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI textGameOver;
+
     private GameManager gm;
     int items_left;
     AudioSource audioSource;
+    [SerializeField] TextMeshProUGUI textGameOver;
+    [SerializeField] private Image[] hearts;
+    [SerializeField] private TextMeshProUGUI points;
 
     void Start()
     {
@@ -28,25 +32,40 @@ public class SceneController : MonoBehaviour
     public void AddPoints()
     {
         gm.points += 100;
-        Debug.Log("Puntos: " + gm.points);
         items_left--;
+        points.text = "" + gm.points;
         if (items_left < 3)
             DestroyKeyObjects();
     }
 
     public void PlayerLoseHp()
     {
-        if (gm.health > 0)
+        gm.health--;
+        if (gm.health >= 1)
         {
             audioSource.Play();
             FindObjectOfType<Player>().SendMessage("SpawnInCheckpoint");
-            gm.health--;
-            Debug.Log("HP left: " + gm.health);
+
+            UpdateHeartsUI();
         }
         else
         {
-            Debug.Log("Partida terminada");
+            UpdateHeartsUI();
+            FindObjectOfType<Player>().gameObject.GetComponent<Renderer>().enabled = false;
             FinishGame();
+        }
+    }
+
+    private void UpdateHeartsUI()
+    {
+        int health = gm.health;
+        // Loop through each heart Image and enable or disable it based on current health
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+                hearts[i].enabled = true;
+            else
+                hearts[i].enabled = false;
         }
     }
 
