@@ -28,10 +28,8 @@ public class SceneController : MonoBehaviour
         gm.points += 100;
         Debug.Log("Puntos: " + gm.points);
         items_left--;
-        if (items_left == 0)
-        {
-            NextLevel();
-        }
+        if (items_left < 3)
+            DestroyKeyObjects();
     }
 
     public void PlayerLoseHp()
@@ -85,5 +83,10 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private void DestroyKeyObjects()
+    {
+        FindObjectOfType<KeyObject>().SendMessage("DestroyYourself");
     }
 }
