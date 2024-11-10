@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7834836768346452693, guid: 722293bbb37774149a1291a20c289306, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.13
+      value: 11.53431
       objectReference: {fileID: 0}
     - target: {fileID: 7834836768346452693, guid: 722293bbb37774149a1291a20c289306, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.89
+      value: 19.0667
       objectReference: {fileID: 0}
     - target: {fileID: 7834836768346452693, guid: 722293bbb37774149a1291a20c289306, type: 3}
       propertyPath: m_LocalPosition.z
@@ -106,6 +106,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2260879149275460000}
     m_Modifications:
+    - target: {fileID: 2241291226680194616, guid: 287b754cda7e22c4091eb63976298344, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3379950525312442161, guid: 287b754cda7e22c4091eb63976298344, type: 3}
       propertyPath: m_Name
       value: EnemyBunny (2)

@@ -6,11 +6,11 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float speed = 5;
     [SerializeField] float jumpPower = 10;
-    private float spawnX = -1.5f, spawnY = 4f;
     private float height;
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded = false;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
         height = GetComponent<Collider2D>().bounds.size.y;
         rb = GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -49,10 +50,9 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
-        Debug.Log("Trying to jump");
         if (isGrounded)
         {
-            Debug.Log("Jumping to jump");
+            audioSource.Play();
             animator.SetTrigger("JumpTrigger");
             Vector3 fuerzaSalto = new Vector2(0, jumpPower);
             rb.AddForce(fuerzaSalto, ForceMode2D.Impulse);
@@ -61,7 +61,8 @@ public class Player : MonoBehaviour
 
     void SpawnInCheckpoint()
     {
-        transform.position = new Vector3(spawnX, spawnY, 0);
+        Vector3 checkpoint = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        transform.position = checkpoint;
         rb.velocity = Vector3.zero;
     }
 }

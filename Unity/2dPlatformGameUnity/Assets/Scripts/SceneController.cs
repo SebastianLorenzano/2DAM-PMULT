@@ -10,11 +10,13 @@ public class SceneController : MonoBehaviour
     [SerializeField] TextMeshProUGUI textGameOver;
     private GameManager gm;
     int items_left;
+    AudioSource audioSource;
 
     void Start()
     {
         gm = GameManager.Instance;
         items_left = FindObjectsOfType<Item>().Length;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class SceneController : MonoBehaviour
     {
         if (gm.health > 0)
         {
+            audioSource.Play();
             FindObjectOfType<Player>().SendMessage("SpawnInCheckpoint");
             gm.health--;
             Debug.Log("HP left: " + gm.health);
