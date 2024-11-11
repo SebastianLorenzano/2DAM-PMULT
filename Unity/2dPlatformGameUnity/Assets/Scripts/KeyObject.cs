@@ -16,7 +16,7 @@ public class KeyObject : MonoBehaviour
         
     }
 
-    private void DestroyYourself()
+    private void DestroyYourself()      // Destroy the key object
     {
         Destroy(gameObject);
     }

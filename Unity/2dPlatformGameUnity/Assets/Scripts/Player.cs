@@ -9,16 +9,16 @@ public class Player : MonoBehaviour
     private float height;
     private Rigidbody2D rb;
     private Animator animator;
-    private bool isGrounded = false;
+    private bool isGrounded = false;        // Checks if the player is on the ground
     AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        height = GetComponent<Collider2D>().bounds.size.y;
-        rb = GetComponent<Rigidbody2D>();
-        animator = gameObject.GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        height = GetComponent<Collider2D>().bounds.size.y;      // Gets the height of the player
+        rb = GetComponent<Rigidbody2D>();                       // Gets the Rigidbody2D component
+        animator = gameObject.GetComponent<Animator>();         // Gets the Animator component
+        audioSource = GetComponent<AudioSource>();              // Gets the AudioSource component
     }
 
 
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(0, -1));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(0, -1));       
         isGrounded = hit.collider != null && hit.distance < height;
 
 
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour
         if (isGrounded)
         {
             audioSource.Play();
-            animator.SetTrigger("JumpTrigger");
+            animator.SetTrigger("JumpTrigger");                 // Gives the jump animation a trigger, which gives it priority over the running animation
             Vector3 fuerzaSalto = new Vector2(0, jumpPower);
             rb.AddForce(fuerzaSalto, ForceMode2D.Impulse);
         }
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
 
     void SpawnInCheckpoint()
     {
-        Vector3 checkpoint = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        Vector3 checkpoint = GameObject.FindGameObjectWithTag("Respawn").transform.position;    // Gets the position of the checkpoint and sets the player's position to it
         transform.position = checkpoint;
         rb.velocity = Vector3.zero;
     }

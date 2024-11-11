@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int health = 3;
 
 
-    void Awake()
+    void Awake()                    
     {
         if (Instance == null)
         {
