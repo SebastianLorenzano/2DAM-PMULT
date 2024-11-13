@@ -19,6 +19,6 @@ public class OutOfMapCollider : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null && collision.gameObject.tag == "Player")
-            FindObjectOfType<SceneController>().SendMessage("PlayerLoseHp");
+            FindObjectOfType<SceneController>().SendMessage("PlayerLoseHp");    // Sends message to SceneController to reduce player's health points
     }
 }

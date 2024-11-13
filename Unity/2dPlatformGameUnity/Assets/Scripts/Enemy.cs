@@ -21,10 +21,15 @@ public class EnemyBat : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (wayPoints.Length > 0)
+    void Update()                               // I used the same movement system on the last project
+    {                                           // It basically moves the enemy from one waypoint to another, and when it reaches the last one, it goes back to the first one
+        if (wayPoints.Length > 0)               // It was made to support more than 2 waypoints, even if its not used in this game in particular.
         {
+            if (nextPosition.x > transform.position.x)
+                transform.localScale = new Vector3(-1, 1, 1);
+            else if (nextPosition.x < transform.position.x)
+                        transform.localScale = new Vector3(1, 1, 1);
+
             transform.position = Vector3.MoveTowards(transform.position, nextPosition, speed * Time.deltaTime);
             if (Vector3.Distance(transform.position, nextPosition) < changeDistance)
             {

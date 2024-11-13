@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,9 +122,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 92
-        height: 25
+        y: 0
+        width: 46
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: Flying (46x30)_1
       rect:
         serializedVersion: 2
-        x: 93
-        y: 3
-        width: 44
-        height: 23
+        x: 46
+        y: 0
+        width: 46
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,10 +163,10 @@ TextureImporter:
       name: Flying (46x30)_2
       rect:
         serializedVersion: 2
-        x: 150
-        y: 4
-        width: 22
-        height: 23
+        x: 92
+        y: 0
+        width: 46
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: Flying (46x30)_3
       rect:
         serializedVersion: 2
-        x: 196
-        y: 5
-        width: 22
-        height: 23
+        x: 138
+        y: 0
+        width: 46
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: Flying (46x30)_4
       rect:
         serializedVersion: 2
-        x: 241
-        y: 4
-        width: 24
-        height: 24
+        x: 184
+        y: 0
+        width: 46
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: Flying (46x30)_5
       rect:
         serializedVersion: 2
-        x: 277
-        y: 4
-        width: 44
-        height: 23
+        x: 230
+        y: 0
+        width: 46
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: Flying (46x30)_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
+        x: 276
+        y: 0
         width: 46
-        height: 25
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
