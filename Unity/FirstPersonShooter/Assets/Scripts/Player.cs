@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
-{
+{   
     // Utilizamos la cámara para el RayCast
     [SerializeField] Camera camara;
     // Start is called before the first frame update
