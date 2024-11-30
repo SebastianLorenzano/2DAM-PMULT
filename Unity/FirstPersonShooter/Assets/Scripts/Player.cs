@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
             if (impactado)
             {
                 Debug.Log("Disparo impactado");
-                if (hit.collider.CompareTag("Enemigo"))
+                if (hit.collider.CompareTag("Enemy"))
                 {
                     Debug.Log("Enemigo acertado");
                 }

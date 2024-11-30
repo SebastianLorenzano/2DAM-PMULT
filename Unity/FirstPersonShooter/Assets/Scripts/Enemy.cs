@@ -1,31 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
     [SerializeField] Transform[] wayPoints;
-    Vector3 siguientePosicion;
-    byte numeroSiguientePosicion;
-    float changeDistance = 0.2f;
-    float speed = 2;
+    int numeroSiguientePosicion;
+    [SerializeField] float changeDistance = 0.2f;
+    [SerializeField] Transform objetivo;
+    private NavMeshAgent navMeshAgent;
+    private Animator animator;
+
 
     void Start()
     {
-        siguientePosicion = wayPoints[0].position;
+        if (wayPoints.Length == 0)
+        {
+            Debug.LogError("Waypoints not assigned");
+            enabled = false;
+            return;
+        }
+
+        if (objetivo == null)
+        {
+            Debug.LogError("Target not assigned");
+            enabled = false;
+            return;
+        }
+        navMeshAgent = GetComponent<NavMeshAgent>();
         numeroSiguientePosicion = 0;
+        animator = GetComponent<Animator>();
+        animator.applyRootMotion = false; // Enable Root Motion
     }
+    
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, siguientePosicion, speed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, siguientePosicion) < changeDistance)
+        if (DistanceToPlayer() < 30)
         {
-            numeroSiguientePosicion++;
-            if (numeroSiguientePosicion >= wayPoints.Length)
-                numeroSiguientePosicion = 0;
-            siguientePosicion = wayPoints[numeroSiguientePosicion].position;
-            transform.LookAt(siguientePosicion);
+            navMeshAgent.SetDestination(objetivo.position); // Chase the player
+        }
+        else
+        {
+            MoveToNextWayPoint();
+        }
+    }
+
+
+    float DistanceToPlayer()
+    {
+        return Vector3.Distance(transform.position, objetivo.position);
+    }
+
+    void MoveToNextWayPoint()
+    {
+        if (navMeshAgent.remainingDistance < changeDistance)
+        {
+            numeroSiguientePosicion = (numeroSiguientePosicion + 1) % wayPoints.Length;
+            navMeshAgent.SetDestination(wayPoints[numeroSiguientePosicion].position);
         }
     }
 }
