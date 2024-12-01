@@ -5,8 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    AudioSource audioSource;
     public int points = 0;
     public int health = 3;
+    public int maxHealth => 3;
 
 
     void Awake()
