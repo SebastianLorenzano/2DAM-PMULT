@@ -10,16 +10,19 @@ public class SceneController : MonoBehaviour
 {
 
     private GameManager gm;                              // Reference to the GameManager script
-    int items_left;                                      // Number of items left in the scene
     AudioSource audioSource;
     [SerializeField] TextMeshProUGUI textGameOver;       // for displaying Game Over text
-    [SerializeField] private TextMeshProUGUI points;    // for displaying points
+    [SerializeField] private TextMeshProUGUI textInfo;    // for displaying information to the player
+    int items_left;                                      // Number of items left in the scene
+    int maxItems;                                        // Maximum number of items in the scene
 
     void Start()
     {
         gm = GameManager.Instance;                          // Gets the GameManager script
         items_left = FindObjectsOfType<Item>().Length;      // Gets the number of items in the scene
         audioSource = GetComponent<AudioSource>();
+        maxItems = items_left;
+        textInfo.text = "Necesito encontrar gasolina para el auto... \n Latas revisadas: " + (maxItems - items_left) + " / " + maxItems;
     }
 
     // Update is called once per frame
@@ -32,7 +35,8 @@ public class SceneController : MonoBehaviour
     {
         gm.points += 100;
         items_left--;
-        points.text = "" + gm.points;
+        textInfo.text = "Necesito encontrar gasolina para el auto... \n Latas revisadas: " + (maxItems - items_left) +  " / " + maxItems;
+
         if (items_left == 0)
         {
             // Activate car
@@ -51,6 +55,7 @@ public class SceneController : MonoBehaviour
         }
         else
         {
+
             FindObjectOfType<Player>().gameObject.GetComponent<Renderer>().enabled = false;     // Hide the player when he dies 
             FinishGame();
         }
@@ -80,7 +85,7 @@ public class SceneController : MonoBehaviour
     private void WinGame()                              // Player wins the game
     {
         textGameOver.enabled = true;
-        textGameOver.text = "You WINN!!";
+        textGameOver.text = "Has escapado!\r\nPuntos: " + gm.points;
         StartCoroutine(LoadMainMenu());
     }
     private IEnumerator LoadMainMenu()                  // After a delay, loads the main menu
