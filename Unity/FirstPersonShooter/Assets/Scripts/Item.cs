@@ -23,11 +23,11 @@ public class Item : MonoBehaviour
         if (collision != null && collision.gameObject.tag == "Player")
         {
             Debug.Log("Pickup item");
-            audioSource.Play();                 // Plays pickup sound
-            renderer.enabled = false;           // Hides the item so the player doesn't see it anymore
-            collider.enabled = false;           // Disables the collider so the player can't pick it up again
-            sceneController.AddPoints();        // Adds textInfo to the player
-            Destroy(gameObject, 2f);            // Destroys it after 2 seconds so the audio can play before it disappears
+            audioSource.Play();                                                 // Plays pickup sound
+            renderer.enabled = false;                                           // Hides the item so the player doesn't see it anymore
+            collider.enabled = false;                                           // Disables the collider so the player can't pick it up again
+            FindAnyObjectByType<SceneController>().SendMessage("GotPickup");    // Tell the scene controller to add points
+            Destroy(gameObject, 2f);                                            // Destroys it after 2 seconds so the audio can play before it disappears
         }
     }
 }

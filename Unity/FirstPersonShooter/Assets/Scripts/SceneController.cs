@@ -1,11 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Rendering;
 using UnityEngine;
-using static UnityEditor.Progress;
 using UnityEngine.SceneManagement;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
@@ -19,14 +15,22 @@ public class SceneController : MonoBehaviour
     [SerializeField] private RawImage bloodOverlay;         // for displaying blood overlay when player is hit
     int items_left;                                      // Number of items left in the scene
     int maxItems;                                        // Maximum number of items in the scene
+    public bool canGoToNextLevel = false;                // If the player can go to the next level
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         gm = GameManager.Instance;                          // Gets the GameManager script
         items_left = FindObjectsOfType<Item>().Length;      // Gets the number of items in the scene
-        maxItems = items_left;
-        textInfo.text = "Necesito encontrar gasolina para el auto... \n Latas revisadas: " + (maxItems - items_left) + " / " + maxItems;
+        maxItems = items_left;                              // Gets the maximum number of pickup items in the scene
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)  // If the scene is the first level, display the following text
+        {
+            textInfo.text = "Maldicion, me quede sin gasolina... \n Debo seguir a pie, no deberia estar lejos... \n Objetivo: Llega al porton";
+            canGoToNextLevel = true;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2) // If the scene is the second level, display the following text
+            textInfo.text = "Necesito encontrar gasolina para el auto... \n Latas revisadas: " + (maxItems - items_left) + " / " + maxItems;
         UpdateBloodOverlay();
     }
 
@@ -36,31 +40,36 @@ public class SceneController : MonoBehaviour
 
     }
 
-    public void AddPoints()
+    public void AddPoints() // Adds points to the game manager
     {
         gm.points += 100;
-        items_left--;
-        textInfo.text = "Necesito encontrar gasolina para el auto... \n Latas revisadas: " + (maxItems - items_left) +  " / " + maxItems;
+    }
+    public void GotPickup()
+    {
+        AddPoints();
+        items_left--;           // Decrease the count of items left 
+        textInfo.text = "Necesito encontrar gasolina para el auto... \n Latas revisadas: " + (maxItems - items_left) + " / " + maxItems; // Update the text
 
-        if (items_left == 0)
+        if (items_left == 0)        // Can go to next level once all items are picked up
         {
-            textInfo.text = "Haz encontrado la gasolina! \n Corre al coche antes de que te agarre la horda!!";
+            canGoToNextLevel = true;        
+            textInfo.text = "Has encontrado la gasolina! \n Vuelve al coche y sal de ahí!";
         }
     }
 
 
     public IEnumerator PlayerLoseHp()
     {
-        yield return new WaitForSeconds(0.5f);
-        gm.health--;
-        if (gm.health >= 0)
+        yield return new WaitForSeconds(0.5f);      // Wait for a short delay before taking damage
+        audioSource.PlayOneShot(audPlayerHit);      // Play the sound of the player being hit
+        gm.health--;                                // Decrease the health of the player
+        if (gm.health >= 0)                                  // If the player still has health
         {
-            UpdateBloodOverlay();
-            audioSource.PlayOneShot(audPlayerHit, 0.6f); // Play the sound
+            UpdateBloodOverlay();                           // Update the blood overlay
         }
         else
         {
-            FinishGame();
+            FinishGame();           // If the player has no health left, finish the game
         }
     }
 
@@ -78,8 +87,6 @@ public class SceneController : MonoBehaviour
             overlayColor.a = alpha; 
             float currentAlpha = bloodOverlay.color.a;
             bloodOverlay.color = overlayColor;
-            Debug.Log($"Health: {gm.health}, Target Alpha: {alpha}, Current Alpha: {currentAlpha}");
-
         }
     }
 
@@ -98,23 +105,25 @@ public class SceneController : MonoBehaviour
             WinGame();                                              // If the current scene is the last one, the player wins the game
     }
 
-    private void FinishGame()                           // Player loses the game
+    private void FinishGame()                                            // Player loses the game
     {
-        textGameOver.enabled = true;
-        StartCoroutine(LoadMainMenu());
+        textGameOver.enabled = true;                                     // Enable the Game Over text
+        textGameOver.text = "Has muerto!\r\nPuntos: " + gm.points;      // Display the points the player got
+        StartCoroutine(LoadMainMenu());                                 // Load the main menu
     }
 
     private void WinGame()                              // Player wins the game
     {
-        textGameOver.enabled = true;
-        textGameOver.text = "Has escapado!\r\nPuntos: " + gm.points;
-        StartCoroutine(LoadMainMenu());
+        textGameOver.enabled = true;                                    // Enable the Game Over text
+        textGameOver.text = "Has escapado!\r\nPuntos: " + gm.points;    // Display the points the player got
+        StartCoroutine(LoadMainMenu());                             // Load the main menu
     }
     private IEnumerator LoadMainMenu()                  // After a delay, loads the main menu
     {
-        Time.timeScale = 0.1f;
-        yield return new WaitForSeconds(0.3f);
-        Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 0.1f;                          // Slow time
+        yield return new WaitForSeconds(0.3f);          // Wait for 3 seconds
+        Time.timeScale = 1;                             // Return time to normal
+        gm.GetComponent<AudioSource>().Stop();           // Stop the background music
+        SceneManager.LoadScene("MainMenu");             // Load the main menu
     }
 }
