@@ -42,6 +42,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2512406587897037000}
     m_Modifications:
+    - target: {fileID: -1860913450491131213, guid: 16592f608fe153d489affd992f6e3526, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1860913450491131213, guid: 16592f608fe153d489affd992f6e3526, type: 3}
+      propertyPath: Priority
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: -1860913450491131213, guid: 16592f608fe153d489affd992f6e3526, type: 3}
+      propertyPath: MaxDistance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: -1860913450491131213, guid: 16592f608fe153d489affd992f6e3526, type: 3}
+      propertyPath: MinDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1860913450491131213, guid: 16592f608fe153d489affd992f6e3526, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0529f517ee2bf294a94456270d77eb1e, type: 3}
+    - target: {fileID: -1860913450491131213, guid: 16592f608fe153d489affd992f6e3526, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 385055040777471108, guid: 16592f608fe153d489affd992f6e3526, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 

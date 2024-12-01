@@ -14,6 +14,12 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Animator animator;
     private Collider collider;
+
+    [SerializeField] AudioClip audZombieGrunt;
+    [SerializeField] AudioClip audZombieDeath;
+
+    private AudioSource audioSource;
+
     private int hp = 3;
     private bool hasBeenHit = false;
     private bool canAttack = true;
@@ -29,19 +35,20 @@ public class Enemy : MonoBehaviour
 
         if (objetivo == null)
         {
-            Debug.LogError("Target not assigned");
-            enabled = false;
-            return;
+            objetivo = FindAnyObjectByType<Player>().transform;
         }
         navMeshAgent = GetComponent<NavMeshAgent>();
         numeroSiguientePosicion = 0;
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
     }
     
 
     void Update()
     {   
+        if (hp <= 0) 
+            return; // If the enemy is dead, do nothing
         if (DistanceToPlayer() < 30)
             navMeshAgent.SetDestination(objetivo.position); // Chase the player
         else
@@ -60,8 +67,10 @@ public class Enemy : MonoBehaviour
     public void TakeDamage()
     {
         hp--;
+
         if (!hasBeenHit) // If the enemy has not been hit
         {
+            audioSource.PlayOneShot(audZombieGrunt, 1f);
             hasBeenHit = true;
             animator.Play("Hurted");
             StartCoroutine(ResetCanMove());
@@ -83,6 +92,8 @@ public class Enemy : MonoBehaviour
             animator.Play("Death1");
         else
             animator.Play("Death2");
+        audioSource.Stop();
+        audioSource.PlayOneShot(audZombieDeath, 1f);
         Destroy(gameObject, 30f);
     }
 
