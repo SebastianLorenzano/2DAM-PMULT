@@ -44,7 +44,7 @@ public class SceneController : MonoBehaviour
 
         if (items_left == 0)
         {
-            // Activate car
+            textInfo.text = "Haz encontrado la gasolina! \n Corre al coche antes de que te agarre la horda!!";
         }
     }
 

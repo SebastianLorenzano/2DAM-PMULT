@@ -66,8 +66,9 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage()
     {
+        Debug.Log("Enemy hit");
         hp--;
-
+        Debug.Log("Enemy Current hp: " + hp);
         if (!hasBeenHit) // If the enemy has not been hit
         {
             audioSource.PlayOneShot(audZombieGrunt, 1f);
@@ -83,6 +84,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        Debug.Log("Enemy died");
         navMeshAgent.isStopped = true;
         navMeshAgent.speed = 0;
         navMeshAgent.ResetPath(); // Clears the current path

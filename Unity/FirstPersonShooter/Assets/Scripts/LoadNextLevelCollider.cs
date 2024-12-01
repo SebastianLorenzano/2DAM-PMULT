@@ -19,6 +19,6 @@ public class LoadNextLevelCollider : MonoBehaviour      // This collider is used
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null && collision.gameObject.tag == "Player")
-            FindObjectOfType<SceneController>().SendMessage("NextLevel");       // Load next level
+            FindObjectOfType<SceneController>().SendMessage("WinGame");       // Win Level and load next
     }
 }
