@@ -102,6 +102,7 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(2.3f);
         navMeshAgent.speed = 1;
         navMeshAgent.isStopped = false;
+        canAttack = true;
 
     }
 
