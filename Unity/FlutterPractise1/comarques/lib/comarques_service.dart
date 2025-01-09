@@ -61,10 +61,11 @@ class ComarquesService {
     return []; // a modificar
   }
 
-  static Future<Comarca?> infoComarca(String comarca) async {
+/*
+/  static Future<Comarca?> infoComarca(String comarca) async {
     // TO-DO
     return Comarca(); // a modificar
   }
-
+*/
 
 }
