@@ -56,16 +56,47 @@ class ComarquesService {
 
 
 
-  static Future<List<dynamic>> obtenirComarques(String provincia) async {
-    // TO-DO
-    return []; // a modificar
+  static Future<List<dynamic>> obtenirComarques(String provincia) async 
+  {
+    try 
+    {
+      String url =
+          "https://node-comarques-rest-server-production.up.railway.app/api/comarques/$provincia";
+      var data = await http.get(Uri.parse(url));
+
+      if (data.statusCode == 200) 
+      {
+        String body = utf8.decode(data.bodyBytes);
+        final bodyJSON = jsonDecode(body);
+        return bodyJSON;
+      } 
+      return [];
+    } 
+    catch (exception) 
+    {
+      print("\x1B[31mError: ${exception.toString()}\x1B[0m");
+      return [];
+    }
   }
 
-/*
-/  static Future<Comarca?> infoComarca(String comarca) async {
-    // TO-DO
-    return Comarca(); // a modificar
+  static Future<Comarca?> infoComarca(String comarca) async 
+  {
+    try 
+    {
+      String url = "https://node-comarques-rest-server-production.up.railway.app/api/comarques/infoComarca/$comarca";
+      var data = await http.get(Uri.parse(url));
+      if (data.statusCode == 200) 
+      {
+        String body = utf8.decode(data.bodyBytes);
+        final bodyJSON = jsonDecode(body);
+        return Comarca.fromJSON(bodyJSON);
+      }
+      return null;
+    } 
+    catch (except) 
+    {
+      print(except.toString());
+      return null;
+    }
   }
-*/
-
 }

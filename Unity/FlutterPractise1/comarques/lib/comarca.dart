@@ -32,14 +32,7 @@ class Comarca {
 
     @override
   String toString() {
-    return '''\x1B[34mComarca:\t\x1B[31m$comarca\n
-    \x1B[34mCapital:\t\x1B[31m$capital\n\
-    x1B[34mPoblacio:\t\x1B[31m$poblacio\x1B[34m\n
-    \n
-    Imatge:\t\t\x1B[31m$img\n
-    \x1B[34mDescripció:\t\x1B[31m$desc\n
-    \x1B[34mCoordenades:\t\x1B[31m($latitud, $longitud)\n
-    \x1B[0m''';
+    return '''\x1B[34mComarca:\t\x1B[31m$comarca\n\x1B[34mCapital:\t\x1B[31m$capital\n\x1B[34mPoblacio:\t\x1B[31m$poblacio\x1B[34m\n\nImatge:\t\t\x1B[31m$img\n\x1B[34mDescripció:\t\x1B[31m$desc\n\x1B[34mCoordenades:\t\x1B[31m($latitud, $longitud)\n\x1B[0m''';
   }
   
 }

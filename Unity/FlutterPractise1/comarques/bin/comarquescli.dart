@@ -3,6 +3,7 @@
 import 'dart:io';
 import 'package:comarquescli/comarques_service.dart';
 import 'package:comarquescli/provincia.dart';
+import 'package:comarquescli/comarca.dart';
 
 void main(List<String> arguments) {
 
@@ -84,19 +85,25 @@ mostraProvinciesSync() async {
   }
 }
 
-mostraComarques(String provincia) {
-  // TO-DO
-
-  // Obtenir la llista de províncies i mostrar-la per pantalla
+// Lo resolvi los 2 con Async
+mostraComarques(String provincia) async {
+  List<dynamic> comarques = await ComarquesService.obtenirComarques(provincia);
+  if (comarques.isNotEmpty) 
+  {
+    for (var comarca in comarques) 
+      print(comarca.toString());
+  } 
+  else 
+    print("\x1B[31mNo s'ha obtingut cap comarca per a la província \"$provincia\"\x1B[0m");
   
-  print("\x1B[35m Funció pendent d'implementació \x1B[0m");
-
 }
-
-mostraInfoComarca(String comarca) {
-  // TO-DO
-
-  print("\x1B[35m Funció pendent d'implementació \x1B[0m");
+mostraInfoComarca(String comarca) async 
+{
+  Comarca? result = await ComarquesService.infoComarca(comarca);
+  if (result != null) 
+    print(result.toString());
+   else 
+    print("\x1B[31mNo s'ha pogut obtenir informació per a la comarca \"$comarca\"\x1B[0m");
 }
 
 
