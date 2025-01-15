@@ -12,14 +12,13 @@ class InfoComarcaGeneral extends StatelessWidget {
     // Agafem la comarca del repositori
     Comarca comarca = RepositoryExemple.obtenirInfoComarca();
     
-    // TO-DO
-    // Afegir la informació següent sobre la comarca:
-    // Imatge, nom, capital i descripció, de forma semblanta com es mostra a l'enunciat
+   // TO-DO
+// Add the following information about the comarca:
+// Image, name, capital, and description, in a way similar to what is shown in the instructions.
 
-    // Podeu fer ús dels ginys i contenidors que considereu oportuns (Containers, SingleChildScrollView, Columns, etc)
-    // Heu de tindre en compte de no sobrepassar els límits i dibuixar fora de l'espai disponible
-    // Per comprovar que no se n'eixiu, podeu provar a girar el dispositiu (si esteu fent-ho sobre Android)
-
+// You can use any widgets and containers you find appropriate (Containers, SingleChildScrollView, Columns, etc).
+// You must ensure that you do not exceed the boundaries and draw outside the available space.
+// To check that you don't go out of bounds, you can try rotating the device (if you're testing it on Android).
     return const Placeholder();
   }
 }
