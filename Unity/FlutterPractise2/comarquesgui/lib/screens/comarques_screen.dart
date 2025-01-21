@@ -51,7 +51,7 @@ class ComarcaCard extends StatelessWidget {
           Positioned(
             bottom: 10,
             left: 10,
-            child: Text(comarca, style: Theme.of(context).textTheme.displayMedium
+            child: Text(comarca, style: Theme.of(context).textTheme.displaySmall,
             ))
         ],
       ),

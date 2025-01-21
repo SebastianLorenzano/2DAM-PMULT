@@ -11,7 +11,32 @@ class InfoComarcaGeneral extends StatelessWidget {
 
     // Agafem la comarca del repositori
     Comarca comarca = RepositoryExemple.obtenirInfoComarca();
-    
+        return Scaffold(
+          body: SingleChildScrollView(
+            child: Column(
+                children: [ 
+                  Image.network(
+                    comarca.img!,  
+                    alignment: Alignment.center,
+                    width: double.infinity, height: 225,
+                    fit: BoxFit.cover),
+                  SizedBox(height: 30),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(comarca.comarca, style: Theme.of(context).textTheme.headlineLarge),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text("Capital: ${comarca.capital!}", style: Theme.of(context).textTheme.headlineMedium),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(comarca.desc!, style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.justify),
+                  ),
+                ],
+              ),
+            ),
+        );
    // TO-DO
 // Add the following information about the comarca:
 // Image, name, capital, and description, in a way similar to what is shown in the instructions.
