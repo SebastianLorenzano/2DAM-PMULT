@@ -11,14 +11,82 @@ class InfoComarcaDetall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Comarca comarca = RepositoryExemple.obtenirInfoComarca();
+    return Scaffold(
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+                children: [ 
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 40.0,
+                      left: 10.0,
+                      right: 10.0,
+                      bottom: 10.0,),
+                    child: MyWeatherInfo(),
+                  ),
+                  Padding(padding: const EdgeInsets.only(
+                    left: 30,
+                    top: 20,
+                    right: 30,
+                  ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            const Expanded(
+                              flex: 1,
+                              child: Text("Població:", textAlign: TextAlign.left),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Text("${comarca.poblacio}", textAlign: TextAlign.left),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            const Expanded(
+                              flex: 1,
+                              child: Text("Latitud:", textAlign: TextAlign.left),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Text("${comarca.latitud}", textAlign: TextAlign.left),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            const Expanded(
+                              flex: 1,
+                              child: Text("Longitud:", textAlign: TextAlign.left),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Text("${comarca.longitud}", textAlign: TextAlign.left),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
 
-    // TO-DO
-    // Afegir la informació següent sobre la comarca:
-    // Població (num. d'habitants), latitud i longitud.
-    // Podeu combinar Column i Row per mostrar la informació tabulada
+                ],
+              ),
+            ),
+        );
 
-    // Abans de la informació, caldrà mostrar la informació sobre l'oratge a la comarca,
-    // mitjançant el widget personalitzat MyWeatherInfo(), que se us proporciona ja implementat
+
+
+// TO-DO
+// Add the following information about the region:
+// Population (number of inhabitants), latitude, and longitude.
+// You can combine Column and Row to display the information in a tabular format.
+
+// Before the information, it will be necessary to display the weather information 
+// about the region using the custom widget MyWeatherInfo(), which has already been provided.
+
     return const Placeholder();
   }
 }

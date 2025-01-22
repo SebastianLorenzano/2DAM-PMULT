@@ -12,30 +12,48 @@ class InfoComarcaGeneral extends StatelessWidget {
     // Agafem la comarca del repositori
     Comarca comarca = RepositoryExemple.obtenirInfoComarca();
         return Scaffold(
-          body: SingleChildScrollView(
-            child: Column(
-                children: [ 
-                  Image.network(
-                    comarca.img!,  
-                    alignment: Alignment.center,
-                    width: double.infinity, height: 225,
-                    fit: BoxFit.cover),
-                  SizedBox(height: 30),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Text(comarca.comarca, style: Theme.of(context).textTheme.headlineLarge),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Text("Capital: ${comarca.capital!}", style: Theme.of(context).textTheme.headlineMedium),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Text(comarca.desc!, style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.justify),
-                  ),
-                ],
+          body: Padding(
+            padding: const EdgeInsets.only(
+              top: 90.0,
+              left: 15.0,
+              right: 15.0),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [ 
+                    Image.network(
+                      comarca.img!,  
+                      alignment: Alignment.center,
+                      width: double.infinity, height: 250,
+                      fit: BoxFit.cover),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 45.0,
+                        left: 20.0,
+                        right: 20.0,
+                        bottom: 20.0,
+                        ),
+                      child: Text(comarca.comarca, style: Theme.of(context).textTheme.headlineLarge),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 20.0,
+                        right: 20.0,
+                        bottom: 30.0,
+                        ),
+                      child: Text("Capital: ${comarca.capital!}", style: Theme.of(context).textTheme.headlineMedium),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 20.0,
+                        right: 20.0,
+                        ),
+                      child: Text(comarca.desc!, style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.justify),
+                    ),
+                  ],
+                ),
               ),
-            ),
+          ),
         );
    // TO-DO
 // Add the following information about the comarca:

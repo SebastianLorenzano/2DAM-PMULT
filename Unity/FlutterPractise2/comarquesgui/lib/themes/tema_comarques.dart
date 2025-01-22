@@ -24,24 +24,24 @@ ThemeData temaComarques = ThemeData(
             Shadow(offset: Offset(2, 2), color: Colors.black, blurRadius: 3),
           ]),
       headlineLarge: TextStyle(
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.w400,
           color: Colors.black,
-          fontFamily: "Roboto",  
-          fontSize: 18,
+          fontFamily: "Merriweather",  
+          fontSize: 35,
           ),
 
       headlineMedium: TextStyle(
           fontWeight: FontWeight.w400,
           color: Colors.black87,
-          fontFamily: "Roboto",  // A good serif alternative could be "Merriweather"
-          fontSize: 16  ,
+          fontFamily: "Merriweather",  // A good serif alternative could be "Merriweather"
+          fontSize: 30,
       ),
 
       headlineSmall:  TextStyle(
-          fontWeight: FontWeight.w200,
+          fontWeight: FontWeight.w400,
           color: Colors.black87,
-          fontFamily: "OpenSans",  // Replace with "Nunito" for a softer look
-          fontSize: 12,
+          fontFamily: "Merriweather",  
+          fontSize: 15,
           height: 1.5,  // Adjust line height for readability
       )
   ),
