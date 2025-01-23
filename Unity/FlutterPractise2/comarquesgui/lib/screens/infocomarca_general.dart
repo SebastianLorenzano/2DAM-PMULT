@@ -14,13 +14,14 @@ class InfoComarcaGeneral extends StatelessWidget {
         return Scaffold(
           body: Padding(
             padding: const EdgeInsets.only(
-              top: 90.0,
               left: 15.0,
               right: 15.0),
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                   children: [ 
+                    SizedBox(
+                      height: 90),
                     Image.network(
                       comarca.img!,  
                       alignment: Alignment.center,
@@ -55,13 +56,5 @@ class InfoComarcaGeneral extends StatelessWidget {
               ),
           ),
         );
-   // TO-DO
-// Add the following information about the comarca:
-// Image, name, capital, and description, in a way similar to what is shown in the instructions.
-
-// You can use any widgets and containers you find appropriate (Containers, SingleChildScrollView, Columns, etc).
-// You must ensure that you do not exceed the boundaries and draw outside the available space.
-// To check that you don't go out of bounds, you can try rotating the device (if you're testing it on Android).
-    return const Placeholder();
   }
 }

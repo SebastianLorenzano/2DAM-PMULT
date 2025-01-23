@@ -32,7 +32,7 @@ List <Widget> _creaLlistaProvincies(List<Provincia> provincies) {
     llista.add( // I afegim a la llista un widget personalitzat de tipus ProvinciaRoundButton
         ProvinciaRoundButton(nom: provincia.nom, img: provincia.imatge ?? ""));
     llista.add(const SizedBox(height: 20)); // Afegim un espai després del widget amb la província
-  }
+  } 
   return llista;
 }
 
@@ -44,12 +44,10 @@ class ProvinciaRoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TO-DO
     return CircleAvatar(
       radius: 110,
       backgroundImage: NetworkImage(img),
       child: Text(nom, style: Theme.of(context).textTheme.displayMedium),
     );
-
   }
 }
