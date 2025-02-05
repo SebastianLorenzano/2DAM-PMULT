@@ -36,12 +36,28 @@ ThemeData temaComarques = ThemeData(
           fontFamily: "Merriweather",  // A good serif alternative could be "Merriweather"
           fontSize: 30,
       ),
+
       headlineSmall:  TextStyle(
           fontWeight: FontWeight.w400,
           color: Colors.black87,
           fontFamily: "Merriweather",  
           fontSize: 15,
           height: 1.5,  
-      )
+      ),
+
+      titleMedium: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.black87,
+          fontFamily: "Merriweather",  // A good serif alternative could be "Merriweather"
+          fontSize: 30,
+      ),
+
+      titleSmall:  TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.black87,
+          fontFamily: "Merriweather",  
+          fontSize: 25,
+          height: 1.5,  
+      ),
   ),
 );

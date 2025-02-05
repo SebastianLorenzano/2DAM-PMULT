@@ -1,6 +1,8 @@
 import 'package:comarquesgui/screens/launcher_screen.dart';
+import 'package:comarquesgui/screens/login_screen.dart';
 import 'package:comarquesgui/themes/tema_comarques.dart';
 import 'package:flutter/material.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -13,8 +15,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       theme: temaComarques,
-      home: const Scaffold(
-        body: LauncherScreen(),
+      home: Scaffold(
+        body: LoginScreen(),
       ),
     );
   }
