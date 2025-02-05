@@ -27,9 +27,6 @@ class LoginScreen extends StatelessWidget {
                   if (value == null || value.isEmpty) {
                     return "No puede estar vacío";
                   }
-                  if (value != LOGIN_PASSWORD) {
-                    return "La dirección de correo no es válida";
-                  }
                   return null;
                 },
                 autofocus: true,
@@ -47,9 +44,6 @@ class LoginScreen extends StatelessWidget {
                   if (value == null || value.isEmpty) {
                     return "No puede estar vacío";
                   }
-                  if (value != LOGIN_PASSWORD) {
-                    return "La contraseña no es válida";
-                  }
                   return null;
                 },
                 obscureText: true,
@@ -66,12 +60,40 @@ class LoginScreen extends StatelessWidget {
                   shape: WidgetStateProperty.all<RoundedRectangleBorder>(const RoundedRectangleBorder(borderRadius: BorderRadius.zero)
                   )
                 ),
+                child: const Text("Iniciar Sesión"),
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? true) {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const LauncherScreen()));
                   }
+                  else {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text("Error"),
+                          content: const Text("El usuario o la contraseña son incorrectas"),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                              Navigator.pop(context, "Volver");
+                              },
+                              child: const Text("Volver"),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                userController.text = LOGIN_USER;  
+                                passwordController.text = LOGIN_PASSWORD;
+                                Navigator.pop(context, "Rellenar usuario");
+
+                              },
+                              child: const Text("Rellenar Usuario"),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  }
                 },
-                child: const Text("Iniciar Sesión"),
               ),
             ],
           ),
