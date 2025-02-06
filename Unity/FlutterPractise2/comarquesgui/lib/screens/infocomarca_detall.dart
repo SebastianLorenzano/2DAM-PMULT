@@ -6,11 +6,19 @@ import 'package:flutter/material.dart';
 class InfoComarcaDetall extends StatelessWidget {
   const InfoComarcaDetall({
     super.key,
+    required this.comarcaString,
   });
-
+  final String comarcaString;
   @override
   Widget build(BuildContext context) {
-    Comarca comarca = RepositoryExemple.obtenirInfoComarca();
+    Comarca? comarca = RepositoryExemple.obtenirInfoComarca(comarcaString);
+    if (comarca == null) {
+      return const Scaffold(
+        body: Center(
+          child: Text("Comarca no encontrada"),
+        ),
+      );
+    }
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

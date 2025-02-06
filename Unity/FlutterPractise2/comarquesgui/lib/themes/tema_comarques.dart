@@ -23,6 +23,14 @@ ThemeData temaComarques = ThemeData(
           shadows: [
             Shadow(offset: Offset(2, 2), color: Colors.black, blurRadius: 3),
           ]),
+      labelSmall: TextStyle(
+          fontWeight: FontWeight.w300,
+          color: Colors.black,
+          fontFamily: "LeckerliOne",
+          fontSize: 25,
+          shadows: [
+            Shadow(offset: Offset(2, 2), color: Colors.white, blurRadius: 3),
+          ]),
       headlineLarge: TextStyle(
           fontWeight: FontWeight.w400,
           color: Colors.black,

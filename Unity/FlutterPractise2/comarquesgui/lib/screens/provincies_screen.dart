@@ -1,5 +1,6 @@
 import 'package:comarquesgui/models/provincia.dart';
 import 'package:comarquesgui/repository/repository_exemple.dart';
+import 'package:comarquesgui/screens/comarques_screen.dart';
 import 'package:flutter/material.dart';
 
 /* Pantalla ProvinciesScreen: mostra tres CircleAvatar amb les diferents províncies */
@@ -10,13 +11,16 @@ class ProvinciesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(                  // Estructura de la pantalla Material Design
-      body: Center(                   // Centrem el contingut
-        child: SingleChildScrollView( // Contenidor amb scroll per si ens n'eixim de l'espai disponible
-          child: Column(              // Organitzem les provincies en forma de columna
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children:               // Obtindrem la llista de widgets amb les provincies amb la 
-                                      // funció privada _creaLlistaProvincies.
-                  _creaLlistaProvincies(RepositoryExemple.obtenirProvincies())),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Center(                   // Centrem el contingut
+          child: SingleChildScrollView( // Contenidor amb scroll per si ens n'eixim de l'espai disponible
+            child: Column(              // Organitzem les provincies en forma de columna
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children:               // Obtindrem la llista de widgets amb les provincies amb la 
+                                        // funció privada _creaLlistaProvincies.
+                    _creaLlistaProvincies(RepositoryExemple.obtenirProvincies())),
+          ),
         ),
       ),
     );
@@ -44,10 +48,15 @@ class ProvinciaRoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 110,
-      backgroundImage: NetworkImage(img),
-      child: Text(nom, style: Theme.of(context).textTheme.displayMedium),
+    return GestureDetector(
+      onTap: () => {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ComarquesScreen(provincia: nom)))
+      },
+      child: CircleAvatar(
+        radius: 110,
+        backgroundImage: NetworkImage(img),
+        child: Text(nom, style: Theme.of(context).textTheme.displayMedium),
+      ),
     );
   }
 }

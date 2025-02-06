@@ -1,4 +1,4 @@
-import 'package:comarquesgui/screens/launcher_screen.dart';
+import 'package:comarquesgui/screens/provincies_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -63,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                 child: const Text("Iniciar Sesión"),
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? true) {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LauncherScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ProvinciesScreen()));
                   }
                   else {
                     showDialog(

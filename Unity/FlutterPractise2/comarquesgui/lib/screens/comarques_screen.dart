@@ -1,17 +1,30 @@
 import 'package:comarquesgui/models/comarca.dart';
 import 'package:comarquesgui/repository/repository_exemple.dart';
+import 'package:comarquesgui/screens/infocomarca_general.dart';
+import 'package:comarquesgui/screens/infocomarca_main.dart';
 import 'package:flutter/material.dart';
 
 class ComarquesScreen extends StatelessWidget {
-  const ComarquesScreen();
+  const ComarquesScreen({
+    super.key,
+    required this.provincia,
+    });
+
+  final String provincia;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          // Proporciona a _creaLlistaComarques la llista de comarques d'Alacant
-          child:
-              _creaLlistaComarques(RepositoryExemple.obtenirComarques())), ////
+      appBar: AppBar(
+        title: Text(provincia == 'Alacant' ? "Comarques d'$provincia" : 'Comarques de $provincia', style: Theme.of(context).textTheme.labelSmall),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Center(
+            // Proporciona a _creaLlistaComarques la llista de comarques d'Alacant
+            child:
+                _creaLlistaComarques(RepositoryExemple.obtenirComarques(provincia))),
+      ), ////
     );
   }
 
@@ -42,18 +55,23 @@ class ComarcaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: 
-      Stack(
-        children: [
-          Image.network(img,
-              width: double.infinity, height: 225, fit: BoxFit.cover),        
-          Positioned(
-            bottom: 10,
-            left: 10,
-            child: Text(comarca, style: Theme.of(context).textTheme.displaySmall,
-            ))
-        ],
+    return GestureDetector(
+      onTap: () => {
+        Navigator.push(context, MaterialPageRoute(builder:(context) => InfocomarcaMain()))
+      },
+      child: Card(
+        child: 
+        Stack(
+          children: [
+            Image.network(img,
+                width: double.infinity, height: 225, fit: BoxFit.cover),        
+            Positioned(
+              bottom: 10,
+              left: 10,
+              child: Text(comarca, style: Theme.of(context).textTheme.displaySmall,
+              ))
+          ],
+        ),
       ),
     );
   }
