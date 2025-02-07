@@ -1,6 +1,4 @@
-import 'package:comarquesgui/models/comarca.dart';
 import 'package:comarquesgui/repository/repository_exemple.dart';
-import 'package:comarquesgui/screens/infocomarca_general.dart';
 import 'package:comarquesgui/screens/infocomarca_main.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +55,7 @@ class ComarcaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => {
-        Navigator.push(context, MaterialPageRoute(builder:(context) => InfocomarcaMain()))
+        Navigator.push(context, MaterialPageRoute(builder:(context) => InfocomarcaMain(comarcaString: comarca,)))
       },
       child: Card(
         child: 

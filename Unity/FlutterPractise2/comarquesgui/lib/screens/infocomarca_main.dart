@@ -1,9 +1,10 @@
+import 'package:comarquesgui/screens/infocomarca_detall.dart';
 import 'package:comarquesgui/screens/infocomarca_general.dart';
 import 'package:flutter/material.dart';
 
 class InfocomarcaMain extends StatefulWidget {
   const InfocomarcaMain({
-    required String comarcaString,
+    required this.comarcaString,
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +23,7 @@ class _ExempleBottomNavigationBarState
       appBar: AppBar(
         title: [
           Text('Informació General', style: Theme.of(context).textTheme.labelSmall),
-          Text('Població i anatge', style: Theme.of(context).textTheme.labelSmall),
+          Text('Població i oratge', style: Theme.of(context).textTheme.labelSmall),
         ][indexActual],
       ),
       bottomNavigationBar: NavigationBar(
@@ -46,17 +47,8 @@ class _ExempleBottomNavigationBarState
         ],
       ),
       body: <Widget>[
-        InfoComarcaGeneral(comarcaString: comarcaString)
-        Container(
-          color: Colors.lime,
-          alignment: Alignment.center,
-          child: const Text('Contingut del destí 2'),
-        ),
-        Container(
-          color: Colors.teal,
-          alignment: Alignment.center,
-          child: const Text('Contingut del destí 3'),
-        ),
+        InfoComarcaGeneral(comarcaString: widget.comarcaString),
+        InfoComarcaDetall(comarcaString: widget.comarcaString)
       ][indexActual],
     );
   }
