@@ -1,3 +1,4 @@
+import 'package:comarquesgui/repository/repository_comarques.dart';
 import 'package:comarquesgui/repository/repository_exemple.dart';
 import 'package:comarquesgui/screens/infocomarca_main.dart';
 import 'package:flutter/material.dart';
@@ -12,17 +13,31 @@ class ComarquesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(provincia == 'Alacant' ? "Comarques d'$provincia" : 'Comarques de $provincia', style: Theme.of(context).textTheme.labelSmall),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Center(
-            // Proporciona a _creaLlistaComarques la llista de comarques d'Alacant
-            child:
-                _creaLlistaComarques(RepositoryExemple.obtenirComarques(provincia))),
-      ), ////
+    return FutureBuilder(
+      future: RepositoryComarques.obtenirComarque(provincia),
+      builder: (context, AsyncSnapshot snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        } if (snapshot.hasError) {
+          return Center(
+            child: Text("Error: ${snapshot.error}"),
+          );
+        }
+          return Scaffold(
+            appBar: AppBar(
+              title: Text(provincia == 'Alacant' ? "Comarques d'$provincia" : 'Comarques de $provincia', style: Theme.of(context).textTheme.labelSmall),
+            ),
+            body: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Center(
+                  // Proporciona a _creaLlistaComarques la llista de comarques d'Alacant
+                  child:
+                      _creaLlistaComarques(snapshot.data)),
+            ),
+          );
+      },
     );
   }
 
