@@ -1,5 +1,6 @@
 import 'package:comarquesgui/models/comarca.dart';
-import 'package:comarquesgui/repository/repository_exemple.dart';
+import 'package:comarquesgui/repository/repository_comarques.dart';
+import 'package:comarquesgui/screens/widgets/my_circular_progress_indicator.dart';
 import 'package:comarquesgui/screens/widgets/my_weather_info.dart';
 import 'package:flutter/material.dart';
 
@@ -9,80 +10,83 @@ class InfoComarcaDetall extends StatelessWidget {
     required this.comarcaString,
   });
   final String comarcaString;
+
   @override
   Widget build(BuildContext context) {
-    Comarca? comarca = RepositoryExemple.obtenirInfoComarca(comarcaString);
-    if (comarca == null) {
-      return Center(
-        child: Text("Comarca no encontrada"),
-      );
-    }
+    // Afegir la informació següent sobre la comarca:
+    // Població (num. d'habitants), latitud i longitud.
+    // Podeu combinar Column i Row per mostrar la informació tabulada
+
+    // Abans de la informació, caldrà mostrar la informació sobre l'oratge a la comarca,
+    // mitjançant el widget personalitzat MyWeatherInfo(), que se us proporciona ja implementat
+    return FutureBuilder(
+      future: RepositoryComarques.obtenirInfoComarca(comarcaString),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: MyCircularProgressIndicator(),
+          );
+        }
+        if (snapshot.hasError) {
+          return const Center(
+            child: Text('Error al carregar la comarca'),
+          );
+        }
+        Comarca? comarca = snapshot.data;
+        return Center(
+          child: comarca != null ? _crearInfoComarca(context, comarca) : const Placeholder(),
+        );
+      }
+    );
+  }
+
+  Widget _crearInfoComarca(BuildContext context, Comarca comarca) {
+    var estiloTexto = const TextStyle(fontSize: 25,);
     return SingleChildScrollView(
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Color.fromRGBO(255, 251, 255, 1),
+        ),
+          padding: const EdgeInsets.only(top: 0, bottom: 80, left: 20, right: 20),
+        child: Container(
+          decoration: const BoxDecoration(
+        color: Color.fromRGBO(254, 254, 254, 1),
+      ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 80.0,
-              left: 15.0,
-              right: 15.0,
-              bottom: 10.0,
-            ),
-            child: MyWeatherInfo(),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 30,
-              top: 20,
-              right: 30,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          MyWeatherInfo(latitud: comarca.latitud, longitud: comarca.longitud),
+          const SizedBox(height: 40),
+          Container(
+            padding: const EdgeInsets.only(left: 30, right: 30),
+            child: Table(
               children: [
-                Row(
+                TableRow(
                   children: [
-                    const Expanded(
-                      flex: 1,
-                      child: Text("Població:", textAlign: TextAlign.left),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Text("${comarca.poblacio}",
-                          textAlign: TextAlign.left),
-                    ),
-                  ],
+                    Text("Població:", style: estiloTexto),
+                    Text(comarca.poblacio.toString(), style: estiloTexto,)
+                  ]
                 ),
-                Row(
+                TableRow(
                   children: [
-                    const Expanded(
-                      flex: 1,
-                      child: Text("Latitud:", textAlign: TextAlign.left),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child:
-                          Text("${comarca.latitud}", textAlign: TextAlign.left),
-                    ),
-                  ],
+                    Text("Latitud:", style: estiloTexto,),
+                    Text(comarca.latitud.toString(), style: estiloTexto,)
+                  ]
                 ),
-                Row(
+                TableRow(
                   children: [
-                    const Expanded(
-                      flex: 1,
-                      child: Text("Longitud:", textAlign: TextAlign.left),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Text("${comarca.longitud}",
-                          textAlign: TextAlign.left),
-                    ),
-                  ],
-                ),
+                    Text("Longitud:", style: estiloTexto,),
+                    Text(comarca.longitud.toString(), style: estiloTexto,)
+                  ]
+                )
               ],
             ),
-          ),
+          )
         ],
-      ),
+      )
+      )
+        ),
     );
   }
 }

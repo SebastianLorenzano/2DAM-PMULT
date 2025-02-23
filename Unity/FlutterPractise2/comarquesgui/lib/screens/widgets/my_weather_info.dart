@@ -1,45 +1,76 @@
+import 'package:comarquesgui/repository/repository_weather.dart';
+import 'package:comarquesgui/screens/widgets/my_circular_progress_indicator.dart';
 import 'package:flutter/material.dart';
 
-class MyWeatherInfo extends StatelessWidget {
-  const MyWeatherInfo({super.key});
+class MyWeatherInfo extends StatefulWidget {
+  MyWeatherInfo({super.key, this.latitud, this.longitud});
 
+  late Future<dynamic> clima;
+  final double? latitud;
+  final double? longitud;
+
+
+  @override
+  State<MyWeatherInfo> createState() => _MyWeatherInfoState();
+}
+
+class _MyWeatherInfoState extends State<MyWeatherInfo> {
+  @override
+  void initState() {
+    widget.clima = RepositoryWeather.obteClima(longitud: widget.longitud ?? 0, latitud: widget.latitud ?? 0);
+    super.initState();
+  }
 // Definim una referència al BLoC
-
   @override
   Widget build(BuildContext context) {
     //oratgeBloc.actualitzaOratge();
 
-    return Column(
-      children: [
-        _obtenirIconaOratge("0"),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+    return FutureBuilder(
+      future: widget.clima,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(
+            child: MyCircularProgressIndicator(),
+          );
+        }
+        if (snapshot.hasError) {
+          return const Center(
+            child: Text('Error al carregar el clima'),
+          );
+        }
+        return Column(
           children: [
-            const Icon(
-              Icons.thermostat,
-              size: 35,
+            _obtenirIconaOratge("0"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.thermostat,
+                  size: 35,
+                ),
+                Text(
+                  "${snapshot.data["current_weather"]["temperature"]}${snapshot.data["current_weather_units"]["temperature"]}",
+                  style: Theme.of(context).textTheme.headlineLarge,
+                ),
+              ],
             ),
-            Text(
-              "5º",
-              style: Theme.of(context).textTheme.headlineMedium,
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.wind_power, size: 35),
+                const SizedBox(width: 30),
+                Text(
+                  "${snapshot.data["current_weather"]["windspeed"]} ${snapshot.data["current_weather_units"]["windspeed"]}",
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
+                const SizedBox(width: 30),
+                obteGinyDireccioVent(snapshot.data["current_weather"]["winddirection"].toString(), context),
+              ],
             ),
           ],
-        ),
-        const SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.wind_power, size: 35),
-            const SizedBox(width: 30),
-            Text(
-              "20 km/h",
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
-            const SizedBox(width: 30),
-            obteGinyDireccioVent("0.0", context),
-          ],
-        ),
-      ],
+        );
+      }
     );
   }
 
@@ -84,7 +115,6 @@ class MyWeatherInfo extends StatelessWidget {
   }
 
   // Codis de https://open-meteo.com/en/docs/dwd-api
-
   Widget _obtenirIconaOratge(String value) {
     Set<String> sol = <String>{"0"};
     Set<String> pocsNuvols = <String>{"1", "2", "3"};
